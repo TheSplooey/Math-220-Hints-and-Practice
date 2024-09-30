@@ -4,3 +4,4 @@
 - You definitely have everything you need to know to prove Q4.
 - This sort of proofs where you have to "construct u" is common in mathematics, I do not expect anyone to get used to them in MATH 220 so I will avoid implementing too many of them.
 - Everything will get easier after practice.
+- For Q5 if I were to mark this problem, I probably would not take points off for not using the inequality without proof, but I included the proof in the solutions in case anyone is curious. This would be a different story if I told you to explicitly prove the inequality too of course.
