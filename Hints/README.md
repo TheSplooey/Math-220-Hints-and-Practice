@@ -1,0 +1,4 @@
+- The main goal of this is to help students get started with thinking about the problem, and point them in a direction to think.
+- I will always encourage students to only look at the hints after they have worked at the problem at hand for a while.
+- Looking at hints should not just give you a solution directly, you should still have to figure them out.
+- If the hint is too easy, please let me know. I don't want to spoil the solutions for others.
