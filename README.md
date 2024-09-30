@@ -1,0 +1,6 @@
+- I tend to make practice tests or practice problem sets harder than what you would get in MATH 220, but I try not to make them unreasonably hard.
+- These are more difficult than what you usually see in MATH 220 since there is already an abudance of material that contain problems similar to MATH 220 in its difficulty
+- (See PLP and Book of Proof)
+- I give hints to homeworks but hopefully they won't be too obvious. I want to give hints on how to start thinking about the problem.
+- The HW3 hints might be too obvious, I will try to make them more focused on how to think about the problem next time.
+- You don't need to take the time limit in the practice tests too strictly. Being able to finish the practice tests in 1.5x the allocated time is already more than enough.
