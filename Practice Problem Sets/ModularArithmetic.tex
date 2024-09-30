@@ -1,0 +1,48 @@
+
+\documentclass[letterpaper,12pt]{article}
+\newcommand{\myname}{Practice package} 
+\newcommand{\mynumber}{Practice package} 
+\newcommand{\hw}{1} 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+
+\usepackage[paper=letterpaper,left=25mm,right=25mm,top=3cm,bottom=25mm]{geometry}
+
+
+\usepackage{fancyhdr} %% for details on how this work, search-engine ``fancyhdr documentation''
+\pagestyle{fancy}
+
+\lhead{Mathematics 220} % course name as top-left
+\chead{Modular Arithmetic} % homework number in top-centre
+\rhead{ \myname \\ \mynumber }
+
+\lfoot{\myname} % name on bottom-left
+\cfoot{Page \thepage} % page in middle
+\rfoot{\mynumber} % student number on bottom-right
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+%% We also redfine the negation symbol:
+\renewcommand{\neg}{\sim}
+\newtheorem{lemma}{Lemma}[section]
+\begin{document}
+\subsection*{Practice questions:}
+\begin{enumerate}
+\item Draw out the multiplication table for integers mod $6$.
+\item Let $p$ be a prime number and assume $a,b \in \mathbb{Z}$. Prove that if $p \mid ab$, then $p \mid a$ or $p \mid b$.
+\item Prove that for all $n \in \mathbb{Z}$, $n$ and $n+1$ are coprime.
+\item Let $m,n \in \mathbb{Z}$, and let $r$ be the remainder of $m$ under division by $n$. Prove that $\gcd (m,n) = \gcd (n,r)$.
+    \item Prove that for all odd $a,b,c \in \mathbb{Z}$, there exists no rational solutions to $ax^2 + bx + c = 0$. (Hint: Proof by contradiction under mod 2)
+    \item Let $\mathbb{Z}_p$ be the set $\set{[0],[1],[2],[3],\ldots,[p-1]}$ with the usual modular arithmetic. Prove that if $p$ is prime, then for all $[a] \neq [0] \in \mathbb{Z}_p$, there exists $[a]^{-1}$ such that $[a] \cdot [a]^{-1} = [1]$ (Note that $\cdot$ is multiplication in modular arithmetic; Hint: Bézout's identity)
+    \item Let $\mathbb{Z}_n$ be the set $\set{[0],[1],[2],[3],\ldots,[n-1]}$ under addition mod $n$ and suppose $M \subseteq \mathbb{Z}_n$ is a non-empty subset such that for all $[a],[b] \in M$, $[a] + [n-b] \in M$ (Note that $+$ denotes addition mod $n$). \begin{enumerate}
+        \item Prove that $[0] \in M$.
+        \item Prove that for all $[a] \in M$, $[n-a] \in M$.
+        \item Prove that $|M|$ divides $n$. (Hint: consider equivalence classes under the relation where for all $[a], [b] \in \mathbb{Z}_n$, $[a] \sim [b]$ if and only if $[a] + [n-b] \in M$)
+    \end{enumerate}
+    \item We will prove Fermat's little theorem, i.e. for all $a ,p \in \mathbb{Z}$ such that $p$ is prime, $a^{p-1} \equiv 1 \mod p$. Let $\mathbb{Z}_p$ be the set $\set{[0],[1],[2],[3],\ldots,[p-1]}$ with the usual modular arithmetic. By Q6, we know every element in the set $\mathbb{Z}_p \backslash \set{[0]}$ is invertible under multiplication. \begin{enumerate}
+        \item Assume $k$ is the smallest natural number such that $a^k \equiv 1 \mod p$ for some $a \in \mathbb{Z}$ such that $1 \leq a \leq p-1$. Let $S \subseteq \mathbb{Z}_p \backslash \set{[0]}$ be a non-empty subset such that $S = \set{[1],[a],[a]^2, \ldots, [a]^{k-1}}$. Similarly to Q7c, prove that $|S| = k$ divides $|\mathbb{Z}_p \backslash \set{[0]}| = p-1$.
+        \item Hence, prove that $a^{p-1} \equiv 1 \mod p$.
+    \end{enumerate}
+\end{enumerate}
+\end{document}
