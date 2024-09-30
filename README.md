@@ -4,3 +4,4 @@
 - I give hints to homeworks but hopefully they won't be too obvious. I want to give hints on how to start thinking about the problem.
 - The HW3 hints might be too obvious, I will try to make them more focused on how to think about the problem next time.
 - You don't need to take the time limit in the practice tests too strictly. Being able to finish the practice tests in 1.5x the allocated time is already more than enough.
+- Also don't use generative AI for proofs, they suck ass, I will literally spank you and dump you into a firepit.
