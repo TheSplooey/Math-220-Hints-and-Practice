@@ -30,8 +30,8 @@
 \subsection*{Hints to homework 3:}
 \begin{enumerate}
 \item[1.] Just be careful that when negating quantifiers you have to switch "for all" and "there exists" and you do not change what comes after the quantifier. Also make sure to negate the inequality correctly.
-\item[2.] Notice if the hypothesis is false, then the statement is always true.
-\item[3.] For (c), consider what happens when both 3 and 4 divide $n$. For (d), consider addition mod 3 and mod 4.
+\item[2.] Notice if the hypothesis is false, then the statement is always true. 
+\item[3.] In general, carefully consider the order at which the quantifiers come. This is important because sometimes you can choose an element based on your preceding quantifiers. "For all x, there exists y, so I choose my y based on x" etc.
 \end{enumerate}
 The rest are pretty straight forward.
 \end{document}
