@@ -5,4 +5,5 @@ Practuce Midterm 1:
   
 Practice Midterm 2:
 - R+ means the positive real numbers.
+
 Just keep practicing, everything will get easier.
