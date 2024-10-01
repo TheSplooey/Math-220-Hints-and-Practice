@@ -4,6 +4,7 @@ Practuce Midterm 1:
 - For Q5 if I were to mark this problem, I probably would not take points off for not using the inequality without proof, but I included the proof in the solutions in case anyone is curious. This would be a different story if I told you to explicitly prove the inequality too of course.
   
 Practice Midterm 2:
-- R+ means the positive real numbers.
+- In Q3, R+ means the positive real numbers. R\Q means irrational numbers. I for irrational numbers is not really a convention outside of MATH 220.
+- For Q4, you will want to be very careful about what you are proving. What you want to show is that if 1 = p1p2...pn, n is even. If 1 DOES NOT equal p1p2...pn when n is odd, your statement still holds. Your statement fails only when 1 = p1p2...pn AND n is odd.
 
 Just keep practicing, everything will get easier.
