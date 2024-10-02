@@ -6,5 +6,6 @@ Practice Midterm 1:
 Practice Midterm 2:
 - In Q3, R+ means the positive real numbers. R\Q means irrational numbers. I for irrational numbers is not really a convention outside of MATH 220.
 - For Q4, you will want to be very careful about what you are proving. What you want to show is that if 1 = p1p2...pn, n is even. If 1 DOES NOT equal p1p2...pn when n is odd, your statement still holds. Your statement fails only when 1 = p1p2...pn AND n is odd.
+- Some people might try proving the contrapositive in Q4 for the inductive step. I have tried it, and that will still eventually lead to a proof by cases in the inductive step since your inductive hypothesis would be "when n = k, if 1 = p1p2...pk then k is even", this does not guarantee that any product of the form p1p2...pk would be equal to 1 when k is even as that would be the converse of the statement (which is, by the way, false)
 
 Just keep practicing, everything will get easier.
