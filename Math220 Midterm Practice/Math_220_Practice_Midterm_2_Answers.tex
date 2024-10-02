@@ -7,10 +7,10 @@
 \usepackage{array}
 \usepackage{marginnote}
 \lhead{MATH 220 Practice Midterm 2} % course name as top-left
-\chead{Page \thepage \ of 9} % homework number in top-centre
+\chead{Page \thepage \ of 10} % homework number in top-centre
 \rhead{Student No: \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 
-\cfoot{Page \thepage \ of 9} % page in middle
+\cfoot{Page \thepage \ of 10} % page in middle
 \usepackage{ragged2e}
 
 \renewcommand{\headrulewidth}{0.4pt}
@@ -57,7 +57,7 @@
 \centering
  \textbf{MATH 220 Practice Midterm 2 --- September, 2024, Duration: 50 minutes}
  \\
-\textit{This test has \textbf{5 questions} on \textbf{9 pages}, for a total of 50 points. }
+\textit{This test has \textbf{5 questions} on \textbf{10 pages}, for a total of 50 points. }
 \vspace{2cm}
 \renewcommand{\arraystretch}{2}
 \\
@@ -161,10 +161,10 @@
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[4.]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
- Let $A = \set{-1, 2, \frac{1}{2}}$
+    \item[4.]
  \begin{enumerate}
-     \item  Prove by induction that if 1 is written as a product $1=p_1p_2p_3\ldots p_n$ where $p_i \in A$, then $n$ is even. 
+     \item  \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
+ Let $A = \set{-1, 2, \frac{1}{2}}$. Prove by induction that if 1 is written as a product $1=p_1p_2p_3\ldots p_n$ where $p_i \in A$, then $n$ is even. 
  \end{enumerate}
  \begin{mdframed}
      \textbf{Solution:}
@@ -203,7 +203,8 @@
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[5.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove that for all $\delta > 0$, there exists $n \in \mathbb{N}$ such that $\frac{1}{\frac{\pi}{2}+2\pi n} < \delta$, and hence prove that the limit $\lim_{x \rightarrow 0} \sin \left (\frac{1}{x} \right ) = L$ does not exist. (Hint: Archimedean property of the reals)
+       \item[5.]  \begin{enumerate}
+        \item \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove that for all $\delta > 0$, there exists $n \in \mathbb{N}$ such that $\frac{1}{\frac{\pi}{2}+2\pi n} < \delta$ and likewise, there exists $m \in \mathbb{N}$ such that  $\frac{1}{\frac{-\pi}{2}+2\pi m} < \delta$ (Hint: Archimedean property of the reals)
     \begin{mdframed}
         \textbf{Solution:}
         \begin{proof}
@@ -211,8 +212,29 @@
                2\pi n &> \frac{1}{\delta} - \frac{\pi}{2} \\
              \frac{\pi}{2} + 2\pi n &> \frac{1}{\delta} 
            \end{align*}
-           so $\frac{1}{\frac{\pi}{2}+2\pi n} < \delta$ as required. Let $\varepsilon = 1$, $\delta > 0$ and choose $x = \frac{1}{\frac{\pi}{2}+2\pi n}$ such that $x < \delta$, and notice $x = |x|$ and $x > 0$ so we have $0 < |x| < \delta$. Observe that $\left |\sin \left ( \frac{1}{x} \right ) \right |=  \left | \sin \left (  \frac{\pi}{2}+2\pi n \right ) \right | = 1 = \varepsilon$ so the limit $\lim_{x \rightarrow 0} \sin \left (\frac{1}{x} \right ) = L$ does not exist.
+           so $\frac{1}{\frac{\pi}{2}+2\pi n} < \delta$ as required. Similarly, notice $2\pi , \frac{1}{\delta} + \frac{\pi}{2} \in \mathbb{R}$ and by the Archimedean property of the reals, we know there exists $m \in \mathbb{N}$ such that \begin{align*}
+               2\pi m &> \frac{1}{\delta} + \frac{\pi}{2} \\
+             \frac{-\pi}{2} + 2\pi m &> \frac{1}{\delta} 
+           \end{align*}
+           so $\frac{1}{\frac{-\pi}{2}+2\pi m} < \delta$ as required. 
         \end{proof}
     \end{mdframed}
+    \end{enumerate}
 \end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Hence prove that the limit $\lim_{x \rightarrow 0} \sin \left (\frac{1}{x} \right ) = L$ does not exist. 
+        \end{enumerate}
+\begin{mdframed}
+    \textbf{Solution:} \begin{proof}
+        Let $L \in \mathbb{R}$. Notice $L = 1$ or $L \neq 1$.
+           \begin{itemize}
+           \item If $L=1$, let $\varepsilon = 1$, $\delta > 0$, and choose $x = \frac{1}{\frac{-\pi}{2}+2\pi n}$ such that $x < \delta$.  Notice $x = |x|$ and $x > 0$ so we have $0 < |x| < \delta$. Observe that $\left |\sin \left ( \frac{1}{x} \right ) - 1 \right |=  \left | \sin \left (  \frac{\pi}{2}+2\pi n \right ) - 1\right | = |-1-1| = 2 \geq \varepsilon$.
+          \item  If $L\neq 1,$ let $\varepsilon = |1-L|$, $\delta > 0$ and choose $x = \frac{1}{\frac{\pi}{2}+2\pi n}$ such that $x < \delta$, and notice $x = |x|$ and $x > 0$ so we have $0 < |x| < \delta$. Observe that $\left |\sin \left ( \frac{1}{x} \right ) - L \right |=  \left | \sin \left (  \frac{\pi}{2}+2\pi n \right ) - L\right | = |1-L| \geq \varepsilon$ 
+           \end{itemize}
+           It follows that the limit $\lim_{x \rightarrow 0} \sin \left (\frac{1}{x} \right ) = L$ does not exist.
+    \end{proof}
+\end{mdframed}
+        \end{enumerate}
 \end{document}
