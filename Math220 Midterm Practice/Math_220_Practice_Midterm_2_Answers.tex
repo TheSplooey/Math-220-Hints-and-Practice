@@ -1,0 +1,218 @@
+\documentclass[letterpaper,12pt]{article}
+\newcommand{\hw}{2} 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage[paper=letterpaper,left=25mm,right=25mm,top=3cm,bottom=25mm]{geometry}
+\usepackage{fancyhdr} %% for details on how this work, search-engine ``fancyhdr documentation''
+\pagestyle{fancy}
+\usepackage{array}
+\usepackage{marginnote}
+\lhead{MATH 220 Practice Midterm 2} % course name as top-left
+\chead{Page \thepage \ of 9} % homework number in top-centre
+\rhead{Student No: \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+
+\cfoot{Page \thepage \ of 9} % page in middle
+\usepackage{ragged2e}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+%% We also redfine the negation symbol:
+\renewcommand{\neg}{\sim}
+\newtheorem{lemma}{Lemma}[section]
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\makeatletter
+\newsavebox\myboxA
+\newsavebox\myboxB
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newlength\mylenA
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+\makeatother
+
+\usepackage[]{mdframed}
+
+
+% draw a frame around given text
+\newcommand{\framedtext}[1]{%
+\par%
+\noindent\fbox{%
+    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{#1}%
+}%
+}
+\begin{document}
+\centering
+ \textbf{MATH 220 Practice Midterm 2 --- September, 2024, Duration: 50 minutes}
+ \\
+\textit{This test has \textbf{5 questions} on \textbf{9 pages}, for a total of 50 points. }
+\vspace{2cm}
+\renewcommand{\arraystretch}{2}
+\\
+\begin{tabular}{ | m{7.5cm}| m{7.5cm}| } 
+  \hline
+  First Name: & Last Name: \\
+  \hline
+  Student Number: & Section: \\
+  \hline 
+ \multicolumn{2}{| l |}{Signature:}  \\
+  \hline
+\end{tabular}
+\\
+\vspace{1.5cm}
+\begin{tabular}{ | P{1.7cm} | P{0.4cm}| P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}} 
+  \hline
+ Question: &1 & 2&3&4&5 \\
+ \hline
+ Points: & & & & &    \\
+  \hline
+  Total:  & \multicolumn{5}{| r |}{/50} \\
+  \hline
+\end{tabular}
+\clearpage
+\begin{enumerate}
+    \item[1.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Negate each of the following and prove or disprove the original statement: \begin{enumerate}
+        \item For all $x \in \mathbb{Z}$, there exists $y\in \mathbb{Z}$, such that there exists $z \in \mathbb{Z}$, such that $xy > z$ implies $ x+y < z$".
+    \end{enumerate}
+      \begin{mdframed}
+            \textbf{Solution:}
+            The negation is "There exists $x \in \mathbb{Z}$ such that for all $y \in \mathbb{Z}$, there exists $z \in \mathbb{Z}$ such that $xy > z$ and $z \leq x+y$.
+            \begin{proof}
+                Let $x \in \mathbb{Z}$. Choose $y = 0$ and $z = -1$. Notice the hypothesis $xy>z$ is false, so the result holds.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] For all $x \in \mathbb{N}$, for all $y \in \mathbb{N}$ such that $x< y$, there exists $a,b \in \mathbb{Z}$ such that $ax + by < \left | \frac{x}{y} \right |$
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:}
+            The negation is "There exists $x \in \mathbb{N}$ such that there exists $y \in \mathbb{N}$ such that $x < y$ such that for all $a,b \in \mathbb{Z}$, $ax + by \geq \left | \frac{x}{y} \right |$
+            \begin{proof}
+                Let $x,y \in \mathbb{N}$. Choose $a,b = -1$ and hence the result holds.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[2. ]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $n,k \in \mathbb{N}$. Prove that if for all $m \in \mathbb{Z}$, $m^k \neq n$, then $n^{1/k}$ is irrational.
+     \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                Let $n,k \in \mathbb{N}$. We prove the contrapositive. Assume $n^{1/k}$ is rational, so $n^{1/k} = \frac{a}{b}$ for some coprime $a \in \mathbb{Z}$ and $b \in \mathbb{N}$. Notice $n = \frac{a^k}{b^k}$. Since $n$ is an integer, we know $b = 1$ so $n = a^k$ and thus the results follows.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[3.]  \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] The Archimedean property of the reals guarantees that for all $x,y \in \mathbb{R}$ where $x > 0$, there exists $n \in \mathbb{N}$ such that $nx > y$. \begin{enumerate}
+        \item Let $x,y \in \mathbb{R}^+$. Prove that there exists $m \in \mathbb{N}$ such that $(m-1)x \leq y < mx$.
+        \end{enumerate}
+         \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                Let $x,y \in \mathbb{R}^+$. By the Archimedean property of the reals, we know there exists $m \in \mathbb{N}$ such that $mx > y$. Now choose $m$ to be the smallest possible $m$ such that $mx > y$. It follows that $(m-1)x \leq y$ as otherwise we would have $(m-1)x = mx$ which is impossible since $x \neq 0$. Thus, $(m-1)x \leq y < mx$ as required.
+            \end{proof}
+        \end{mdframed}
+        \vspace{1in}
+    \begin{enumerate}
+        \item[(b)] Using (a), prove that for all $x,y \in \mathbb{R}^+$ such that $x<y$, there exists $q \in \mathbb{Q}$ such that $x < q < y$. (Hint: Consider $y-x$ and also notice $1 \in \mathbb{R}^+$)
+    \end{enumerate}
+    \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                Let $x,y \in \mathbb{R}^+$. By the Archimedean property of the reals, we know there exists $n \in \mathbb{N}$ such that $n(y-x) > 1$. From part (a), we also know there exists $m \in \mathbb{N}$ such that $(m-1) \leq nx < m$. Hence, \begin{align*}
+                    1 &< n(y-x) \\
+                    1+nx &< ny \\
+                  1 + (m-1) \leq  1+nx &< ny \\
+                  m &< ny \\
+                  nx < m &< ny \\
+                  x < \frac{m}{n} &< y
+                \end{align*}
+                Since $n \in \mathbb{N}$, it follows $\frac{m}{n} \in \mathbb{Q}$ so there exists $q \in \mathbb{Q}$ such that $x < q < y$ as required.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(c)] Assume that $\sqrt{2}$ is irrational. Using $\sqrt{2}$, prove that for all $x,y \in \mathbb{R}^+$ such that $x<y$, there exists $z \in \mathbb{R}\backslash \mathbb{Q}$ such that $x<z<y$. You may assume that irrational numbers added to and multiplied by rational numbers are still irrational. (Hint: From part (b), we have that there exists $p,q \in \mathbb{Q}$ such that $x<p<q<y$)
+    \end{enumerate}
+    \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                Let $x,y \in \mathbb{R}^+$ and assume that $\sqrt{2}$ is irrational. Notice, $\frac{\sqrt{2}}{2}$ is also irrational and $\frac{\sqrt{2}}{2} < 1$. From part (b), we know there exists $p,q \in \mathbb{Q}$ such that $x<p<q<y$. Choose $\alpha = p + \frac{\sqrt{2}}{2}(q-p)$. Then, $q-p > 0$ since $q > p$, so $\alpha > p$. But also, since $\frac{\sqrt{2}}{2} < 1$, $\alpha < p + (q-p) = p $. Since $\alpha$ is irrational and $x < p < \alpha < y$, we have that for all $x,y$, there exists $z \in \mathbb{R} \backslash \mathbb{Q}$ such that $x < z < y$ as required.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[4.]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
+ Let $A = \set{-1, 2, \frac{1}{2}}$
+ \begin{enumerate}
+     \item  Prove by induction that if 1 is written as a product $1=p_1p_2p_3\ldots p_n$ where $p_i \in A$, then $n$ is even. 
+ \end{enumerate}
+ \begin{mdframed}
+     \textbf{Solution:}
+     \begin{proof}
+         Let $A$ be as stated. We proceed with mathematical induction on the number of $p_i \in A$ that are being multiplied together. \begin{itemize}
+             \item For the base case, notice $1 \notin A$ so $1 \neq p_1$. The base case holds.
+             \item Assume that if for all $i$ such that $1 \leq i \leq k$, $1=p_1p_2p_3\ldots p_k$ is only possible when $k$ is even. For $k +1$, we proceed with a proof by cases.
+             \begin{itemize}
+                 \item Assume $p_{k+1} = \frac{1}{p_i}$ for some $i$ such that $1 \leq i \leq k$. Then, $p_i p_{k+1} = 1$ and thus we are left with $p_1p_2 \ldots p_{i-1}p_{i+1} \ldots p_k$, which has a length of $k-1$ and thus by our assumption, $k-1$ is even or $1$ cannot be written as a product $1 = p_1p_2 \ldots p_{i-1}p_{i+1} \ldots p_k$. In both cases, we have $k+1$ is even or $1$ cannot be written as a product $1 = p_1p_2 \ldots p_{k+1}$
+                 \item Assume $p_{k+1} \neq \frac{1}{p_i}$ for all $i$ such that $1 \leq i \leq k$. We split this into another proof by cases. \begin{itemize}
+                     \item If $p_{k+1} = -1$, then we know for all $i$ such that $1 \leq i \leq k$, $p_i \neq -1$ so $p_1p_2 \ldots p_{k+1} < 0$ and hence cannot be 1.
+                     \item If $p_{k+1} \neq -1$, then there exists $j$ where $1 \leq j \leq k$ such that $p_{k+1} = p_j$. There are 2 cases to verify. \begin{itemize}
+                         \item Assume for all $i$ such that $1 \leq i \leq k$, $p_i \neq 2$. Then, $p_1p_2 \ldots p_{k+1} \leq \frac{1}{2}$ and hence cannot be 1.
+                         \item Assume for all $i$ such that $1 \leq i \leq k$, $p_i \neq \frac{1}{2}$ and thus  $p_1p_2 \ldots p_{k+1} \geq 2$ and hence cannot be 1.
+                     \end{itemize}
+                 \end{itemize}
+                Since we have that this product is equal to 1 in none of the cases, our inductive step still holds.
+             \end{itemize}
+         \end{itemize}
+         Since both the base case and the inductive step hold, by the principle of mathematical induction, the result holds for all $n \in \mathbb{N}$.
+     \end{proof}
+ \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Prove or disprove that the same applies for $B = \set{-1, \pm 2, \pm \frac{1}{2}}$.
+    \end{enumerate}
+    \begin{mdframed}
+        \textbf{Solution:}
+        \renewcommand{\proofname}{Disproof}
+        \begin{proof}
+            Let $B$ be as stated. Notice $1 = -1 \cdot -2 \cdot \frac{1}{2}$ so $1 = p_1p_2p_3$ where $p_1,p_2,p_3 \in B$ but $3$ is not even, so the same does not apply for $B$.
+        \end{proof}
+    \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[5.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove that for all $\delta > 0$, there exists $n \in \mathbb{N}$ such that $\frac{1}{\frac{\pi}{2}+2\pi n} < \delta$, and hence prove that the limit $\lim_{x \rightarrow 0} \sin \left (\frac{1}{x} \right ) = L$ does not exist. (Hint: Archimedean property of the reals)
+    \begin{mdframed}
+        \textbf{Solution:}
+        \begin{proof}
+           Let $\delta > 0$. Notice $2\pi , \frac{1}{\delta} - \frac{\pi}{2} \in \mathbb{R}$ and by the Archimedean property of the reals, we know there exists $n \in \mathbb{N}$ such that \begin{align*}
+               2\pi n &> \frac{1}{\delta} - \frac{\pi}{2} \\
+             \frac{\pi}{2} + 2\pi n &> \frac{1}{\delta} 
+           \end{align*}
+           so $\frac{1}{\frac{\pi}{2}+2\pi n} < \delta$ as required. Let $\varepsilon = 1$, $\delta > 0$ and choose $x = \frac{1}{\frac{\pi}{2}+2\pi n}$ such that $x < \delta$, and notice $x = |x|$ and $x > 0$ so we have $0 < |x| < \delta$. Observe that $\left |\sin \left ( \frac{1}{x} \right ) \right |=  \left | \sin \left (  \frac{\pi}{2}+2\pi n \right ) \right | = 1 = \varepsilon$ so the limit $\lim_{x \rightarrow 0} \sin \left (\frac{1}{x} \right ) = L$ does not exist.
+        \end{proof}
+    \end{mdframed}
+\end{enumerate}
+\end{document}
