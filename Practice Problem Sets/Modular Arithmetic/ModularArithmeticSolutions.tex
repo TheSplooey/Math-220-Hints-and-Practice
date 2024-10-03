@@ -57,7 +57,7 @@
 \end{proof}
 \item Prove that for all $n \in \mathbb{Z}$, $n$ and $n+1$ are coprime.
 \begin{proof}
-    Let $n \in \mathbb{Z}$ and assume $p \mid n$ and $p \mid n+1$ for some $p \in \mathbb{Z}$. Then, $n = pk$ and $n+1 = p\ell$ for some $k, \ell \in \mathbb{Z}$. Hence, $1= n+1 - n = p(\ell + k)$ so $p \mid 1$. It follows that $p = \pm 1$ so the only natural number that can divide $n$ and $n+1$ is $1$, $n$ and $n+1$ are coprime as required.
+    Let $n \in \mathbb{Z}$ and assume $p \mid n$ and $p \mid n+1$ for some $p \in \mathbb{Z}$. Then, $n = pk$ and $n+1 = p\ell$ for some $k, \ell \in \mathbb{Z}$. Hence, $1= n+1 - n = p(\ell - k)$ so $p \mid 1$. It follows that $p = \pm 1$ so the only natural number that can divide $n$ and $n+1$ is $1$, $n$ and $n+1$ are coprime as required.
 \end{proof}
 \item Let $m,n \in \mathbb{Z}$, and let $r$ be the remainder of $m$ under division by $n$. Prove that $\gcd (m,n) = \gcd (n,r)$. \begin{proof}
      Let $m,n \in \mathbb{Z}$, and let $r$ be the remainder of $m$ under division by $n$. We show that $m$ and $n$ have the same set of common divisors as $n$ and $r$. Suppose $d \mid m$ and $d \mid n$ for some $d \in \mathbb{Z}$. Notice $m \equiv 0 \mod d$ and $n \equiv 0 \mod d$, and since $m = nk + r$ for some $k \in \mathbb{Z}$, \begin{align*}
