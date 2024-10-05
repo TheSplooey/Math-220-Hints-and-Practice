@@ -1,0 +1,39 @@
+\documentclass[letterpaper,12pt]{article}
+\newcommand{\myname}{Hints}
+\newcommand{\mynumber}{Hints} 
+\newcommand{\hw}{4} 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+
+\usepackage[paper=letterpaper,left=25mm,right=25mm,top=3cm,bottom=25mm]{geometry}
+
+
+\usepackage{fancyhdr} %% for details on how this work, search-engine ``fancyhdr documentation''
+\pagestyle{fancy}
+
+\lhead{Mathematics 220} % course name as top-left
+\chead{Homework \hw} % homework number in top-centre
+\rhead{ \myname \\ \mynumber }
+
+\lfoot{\myname} % name on bottom-left
+\cfoot{Page \thepage} % page in middle
+\rfoot{\mynumber} % student number on bottom-right
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+%% We also redfine the negation symbol:
+\renewcommand{\neg}{\sim}
+\newtheorem{lemma}{Lemma}[section]
+\begin{document}
+
+\subsection*{Hints to homework 4:}
+\begin{enumerate}
+\item[1.] You know from Bézout's lemma that there exists $x,y \in \mathbb{Z}$ such that $ax + by = 1$, so you can fix these variables. Try playing around with expressions by fixing $x$ and $y$.
+\item[3.] Usually, multiply things out and simplifying expressions like $|\frac{2x^2}{2x^2 + 1}-2|$ will make things less confusing. 
+\item[4.] You should think about what special properties sine have. It would be really nice if I can just somehow "delete" sine, or just not have to deal with it at all.
+\item[5.] Since $x_n$ converges to 0, you can fix any arbitrary $\varepsilon_N > 0$ and you will get that for all $n > N$, $|x_n - 0 | \leq \varepsilon_N$. Notice $\set{x_1,x_2,x_3,\ldots,x_N}$ is a finite set.
+\item[6.] What special properties do $(-1)^n$ have? What happens when $n$ is very big?
+\end{enumerate}
+(2) is pretty straight forward, just be careful.
+\end{document}
