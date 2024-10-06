@@ -1,0 +1,1 @@
+The "Torture Finals" was actually originally "Practice Finals 2" but at some point I realised it was an unbalanced hot pile of shit so I just named it what it is and made an easier "Practice Finals 2". The "Torture Finals" is still doable (sorta) but it is just lengthy as fuck. Expect to take at least 3.5 hours to finish it.
