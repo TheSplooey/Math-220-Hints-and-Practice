@@ -7,10 +7,10 @@
 \usepackage{array}
 \usepackage{marginnote}
 \lhead{MATH 220 Practice Finals 2} % course name as top-left
-\chead{Page \thepage \ of 19} % homework number in top-centre
+\chead{Page \thepage \ of 20} % homework number in top-centre
 \rhead{Student No: \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 
-\cfoot{Page \thepage \ of 19} % page in middle
+\cfoot{Page \thepage \ of 20} % page in middle
 \usepackage{ragged2e}
 
 \renewcommand{\headrulewidth}{0.4pt}
@@ -46,7 +46,7 @@
 \centering
  \textbf{MATH 220 Practice Finals 2 --- October, 2024, Duration: 2.5 hours}
  \\
-\textit{This test has \textbf{9 questions} on \textbf{19 pages}, for a total of 90 points. }
+\textit{This test has \textbf{10 questions} on \textbf{20 pages}, for a total of 100 points. }
 \vspace{2cm}
 \renewcommand{\arraystretch}{2}
 \\
@@ -63,23 +63,23 @@
 \vspace{1.5cm}
 \begin{tabular}{ | P{1.7cm} | P{0.4cm}| P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}} 
   \hline
- Question: &1 & 2&3&4&5&6&7&8&9 \\
+ Question: &1 & 2&3&4&5&6&7&8&9&10 \\
  \hline
- Points: & & & & & & & & &     \\
+ Points: & & & & & & & & & &     \\
   \hline
-  Total:  & \multicolumn{9}{| r |}{/90} \\
+  Total:  & \multicolumn{10}{| r |}{/100} \\
   \hline
 \end{tabular}
 \clearpage
 \begin{enumerate}
     \item[1.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Carefully define or restate each of the following: \begin{enumerate}
-        \item A relation on $A$
+        \item An upper bound on a set $A \subseteq X$ where $X$ is ordered
         \vspace{1.4in}
-        \item A function $f:A \mapsto B$
+        \item Bézout's lemma
                 \vspace{1.4in}
-        \item The limit of a function $f: \mathbb{R} \mapsto \mathbb{R}$ as $x \rightarrow a$
+        \item A partition on a set $X$
                 \vspace{1.4in}
-        \item Euclidean division
+        \item A bounded sequence $(x_n)_{n \in \mathbb{N}} : \mathbb{N} \mapsto \mathbb{R}$
                 \vspace{1.4in}
         \item The principle of mathematical induction
     \end{enumerate}
@@ -88,39 +88,77 @@
 \begin{enumerate}
     \item[2.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Write the negation of each of the following and prove or disprove the original statement.
     \begin{enumerate}
-        \item There exists a prime $p \in \mathbb{Z}$ such that there exists $r,k \in \mathbb{Z}$ such that $0 \leq r \leq p-1$ and $k < p$ and $p \mid kr$.
+        \item Let $A$ be the set of rational numbers with odd denominators. Then, for all $x \in A$, for all $y \in A$, $x+y \in A$ or $xy \in A$.
     \end{enumerate}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
     \item[] \begin{enumerate}
-        \item[(b)] For all $n \in \mathbb{N}$, for all $p,q \in \mathbb{N}$ such that $k,\ell \in \mathbb{N}$ are the smallest integers such that $n \mid kp$ and $n \mid \ell q$, then if $k = \ell$, $|\set{ px \in \mathbb{Z} | 0 \leq px \leq kp \in \mathbb{Z}}| = |\set{ qy \in \mathbb{Z} | 0 \leq y q \leq \ell q \in \mathbb{Z}}|$
+        \item[(b)] For all people $e \in D_e$ where $D_e$ is the set of all people, there exists a function $f:D_e \mapsto D_e$ such that $f$ maps $e$ to the biological grandmothers of $e$.
     \end{enumerate}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[3. ]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $(\mathbb{Q},+)$ be the set of rational numbers with addition as the operation and $(\mathbb{Q}\backslash \set{0},\cdot)$ be the set of rational numbers except 0 with multiplication as the operation. Prove that there does not exist a bijective $f: (\mathbb{Q},+) \mapsto (\mathbb{Q}\backslash \set{0},\cdot)$ such that for all $x,y \in (\mathbb{Q},+)$, $f(x+y) = f(x)f(y)$.
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-    \item[4.]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $S = \set{1,2,3,\ldots,m \in \mathbb{N}}$ and $p_i:S \mapsto S$ be a function that swaps some $a,b \in S$ around where $a \neq b$ and fixes everything else, denoted $p_i = (ab)$. Prove that the identity map $e$ can only be written as a product $p_1p_2p_3\ldots p_n$ where $n$ is even by induction on the number of $p_i$.
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-    \item[5.]  \begin{enumerate}
-    \item \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
-Let $D_n$ denote the set of rotations by an angle of $\frac{2\pi}{i}$ where $1 \leq n$ and reflections across an axis of symmetry on an $n-$gon, and let $\sim$ be a relation $\sigma \sim \tau$ if and only if $\sigma \tau$ is a rotation where $\sigma, \tau \in D_n$. Prove that $R$ is an equivalence relation.
-\end{enumerate}
+    \item[3. ]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $f: A \mapsto B$ and $g: B \mapsto C$ be functions. Prove or disprove each of the following: \begin{enumerate}
+        \item If $g \circ f$ is bijective, then $f$ is injective.
+        
+    \end{enumerate}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
     \item[] \begin{enumerate}
-        \item[(b)] Let $R$ be the set of rotations and for all $\sigma \in D_n$, let $\sigma R$ denote the set $\set{\sigma x | x \in R}$. Prove that the collection of $\sigma R$ forms a partition on $D_n$. Furthermore, prove that for all $\sigma \in D_n$, $\sigma R = [\sigma]$ where $[\sigma]$ is the equivalence class of $\sigma$ under $\sim$.
+        \item[(b)] If $g \circ f$ is bijective, then $f$ is surjective.
     \end{enumerate}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[6.] \begin{enumerate}
+    \item[4.]\begin{enumerate}
+        \item \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove by induction that if $A$ is finite, then $|\mathcal{P}(A)|=2^{|A|}$.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Using the binomial theorem and without induction, prove the same statement again.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[5.]  \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $\mathbb{Z}/n\mathbb{Z}= \set{[0],[1],\ldots,[n-1]}$ denote the equivalence classes of the set of integers under mod $n$. For all $[a] \in \mathbb{Z}/n\mathbb{Z}$, let $\# a$ denote the smallest natural number such that $\# a[a] = [0]$. and define an equivalence relation $\sim$ on $\mathbb{Z}/n\mathbb{Z}$ where $[a] \sim [b]$ if and only if $\# a = \# b$. Prove that $\sim$ is a relationship.
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Let $n >1$. Find the equivalence classes and determine how many equivalence classes there are.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(c)] Prove that for all $[a] \in \mathbb{Z}/n\mathbb{Z}$, $\# a \mid n$.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[6.]  
+    \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
+Prove that if $x > 0$ and $y \in \mathbb{R}$, then there exists $n \in \mathbb{N}$ such that $nx > y$.
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[7.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove or disprove each of the following: \begin{enumerate}
+        \item If $A$ is a infinite and $P \subseteq \mathcal{P}(A)$ is a finite partition of $A$, then for all $X \in P$, $X$ is infinite.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] If $A$ is a infinite and $P \subseteq \mathcal{P}(A)$ is an infinite partition of $A$, then for all $X \in P$, $X$ is finite.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[8.] \begin{enumerate}
         \item \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove that if $A_1,A_2,A_3 \ldots A_n$ and $B_1,B_2,B_3,\ldots B_n$ are non-empty sets such that for all $i \leq n \in \mathbb{N}$, $|A_i| \leq |B_i|$, then $|\prod_{i = 1}^n A_i |\leq |\prod_{i = 1}^n B_i |$ by constructing an explicit injection $f: \prod_{i = 1}^n A_i  \mapsto \prod_{i = 1}^n B_i $
     \end{enumerate}
 \end{enumerate}
@@ -132,31 +170,7 @@ Let $D_n$ denote the set of rotations by an angle of $\frac{2\pi}{i}$ where $1 \
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[7.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove or disprove each of the following: \begin{enumerate}
-        \item There exists a bijective function $f:\mathbb{R} \mapsto S_1$ where $S_1$ is the unit circle in $\mathbb{C}$.
-    \end{enumerate}
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-    \item[] \begin{enumerate}
-        \item[(b)] For all $A,B$, $|A \times B| = |B \times A|$.
-    \end{enumerate}
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-    \item[] \begin{enumerate}
-        \item[(c)] A countable union of countable sets is countable.
-    \end{enumerate}
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-    \item[] \begin{enumerate}
-        \item[(d)] A denumerable intersection of uncountable sets is countable.
-    \end{enumerate}
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-    \item[8.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
+    \item[9.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
  Let $B_r(x) \in \mathbb{R}^n$, called an open ball of radius $r$, be defined as $\set{y \in \mathbb{R}^n | \| x-y \| < r}$ for some $r > 0$, note that $\| x-y \|$ refers to the Euclidean norm $\| x-y \| = \sqrt{\sum_{i=1}^n (x_i - y_i)^2}$. \begin{enumerate}
         \item Let $p \in \mathbb{R}^n$ and $q \in B_r(p)$. Show that there exists $B_{r_2}(q) \subseteq B_r(p)$.
     \end{enumerate}
@@ -169,20 +183,23 @@ Let $D_n$ denote the set of rotations by an angle of $\frac{2\pi}{i}$ where $1 \
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[9.] \begin{enumerate}
-    \item\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in]   Let $A \subseteq \mathbb{R}$. Prove that if $-A = \set{-a | a \in A}$, then $-\sup A = \inf A$. 
-\end{enumerate}
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-   \item[] \begin{enumerate}
-       \item[(b)] Let $(x_n)_{n\in\mathbb{N}} : \mathbb{N} \mapsto \mathbb{R}$ be a non-decreasing sequence, and let $X= \set{x_n | n \in \mathbb{N}}$. Prove that if $(x_n)_{n\in\mathbb{N}}$ is bounded above, then $\lim_{n \rightarrow \infty} x_n = \sup X$. Likewise, prove that if $(x_n)_{n\in\mathbb{N}}$ is a non-increasing sequence, and if $(x_n)_{n\in\mathbb{N}}$ is bounded below, then $\lim_{n \rightarrow \infty} x_n = \inf X$
-   \end{enumerate}
+    \item[10.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
+    Let $f:(0,1) \mapsto \mathbb{R}$ be defined as $f(x) = \frac{2x-1}{x-x^2}$. \begin{enumerate}
+        \item Prove that $f$ is injective.
+    \end{enumerate}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
     \item[] \begin{enumerate}
-        \item[(c)] Prove that if $(x_n)_{n\in\mathbb{N}} : \mathbb{N} \mapsto \mathbb{R}$ is bounded, then $(x_n)_{n \in \mathbb{N}} : \mathbb{N} \mapsto \mathbb{R}$ has a finite limit.
+        \item[(b)] Prove that $f$ is surjective.
+        \vspace{6in}
+        \item[(c)] Hence prove that $|(0,1)|=|\mathbb{R}|$.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(d)] Prove that $f$ is continuous over $(0,1)$.
     \end{enumerate}
 \end{enumerate}
 \end{document}
