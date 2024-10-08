@@ -112,16 +112,17 @@
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[4.]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $n \in \mathbb{N}$ be even and $\mathbb{Z} / n\mathbb{Z} = \set{0,1,2,\ldots,n-1}$. Let $S = \set{k \in \mathbb{Z} / n\mathbb{Z}| 2k \equiv 0 \mod n } \subseteq \mathbb{Z} / n\mathbb{Z}$. Prove that $|S|$ is odd.
+    \item[4.]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $n \in \mathbb{N}$ be even and $\mathbb{Z} / n\mathbb{Z} = \set{0,1,2,\ldots,n-1}$. Let $S = \set{k \in \mathbb{Z} / n\mathbb{Z}| 2k \equiv 0 \mod n }$. Prove that $|S|$ is even.
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[5.]  \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove that $f: \mathbb{R} \mapsto \mathbb{C}\backslash \set{0}$ where $f(x) = e^{2\pi i x}$ is neither injective nor surjective and for all $x,y \in \mathbb{R}$, $f(x+y) = f(x)f(y)$.
+    \item[5.] \begin{enumerate} \item \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove that $f: \mathbb{R} \mapsto \mathbb{C}\backslash \set{0}$ where $f(x) = e^{2\pi i x}$ is neither injective nor surjective and for all $x,y \in \mathbb{R}$, $f(x+y) = f(x)f(y)$.
+    \end{enumerate}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
     \item[] \begin{enumerate}
-        \item[(b)] Let $R$ be a relation on $\mathbb{R}$ be defined as $x R y$ if and only if $x = y + z$ where $z \in f^{-1}(1)$. Prove that $R$ is an equivalence relation.
+        \item[(b)] Let $R$ be a relation on $\mathbb{R}$ be defined as $x R y$ if and only if $x = y + z$ where $z \in f^{-1}(\set{1})$. Prove that $R$ is an equivalence relation.
     \end{enumerate}
 \end{enumerate}
 \pagebreak
@@ -140,7 +141,7 @@
 \begin{enumerate}
     \item[6.]  \begin{enumerate}
     \item \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
-Let $X$ be a set. Prove that any equivalence relation on $X$ forms a partition on $X$.
+Let $X$ be a non-empty set. Prove that any equivalence relation on $X$ forms a partition on $X$.
 \end{enumerate}
 \end{enumerate}
 \pagebreak
@@ -151,31 +152,33 @@ Let $X$ be a set. Prove that any equivalence relation on $X$ forms a partition o
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[7.] \begin{enumerate}
-        \item \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove that if $a \neq 0$, $\lim_{x \rightarrow a} \frac{1}{x} = \frac{1}{a}$.
+    \item[7.] 
+     \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove that if $a \neq 0$, $\lim_{x \rightarrow a} \frac{1}{x} = \frac{1}{a}$.
     \end{enumerate}
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-    \item[] \begin{enumerate}
-        \item[(b)] Prove that $\lim_{x \rightarrow 0} \frac{1}{x}$ does not exist.
-    \end{enumerate}
-\end{enumerate}
 \pagebreak
 \begin{enumerate}
     \item[8.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove or disprove each of the following: \begin{enumerate}
-        \item Let $A,B \subseteq C$. If $|A\backslash C| = |B \backslash C|$, then $|A| = |B|$
+        \item Let $A,B \subseteq C$. If $|C \backslash A| = |C \backslash B \backslash C|$, then $|A| = |B|$.
     \end{enumerate}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
     \item[] \begin{enumerate}
-        \item[(b)] Let $A_i \in X$. Then, $(\bigcup_{i \in I} A_i) \backslash X = \bigcap_{i \in I} (A_i \backslash X)$.
+        \item[(b)] Let $A_i \in X$. Then, $X \backslash (\bigcup_{i \in I} A_i)   = \bigcap_{i \in I} (X \backslash A_i )$.
     \end{enumerate}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[9.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove or disprove that the set of decimal numbers $0.a_1 a_2 a_3 \ldots$ where $a_1,a_2,a_3 \in \set{0,1}$ is uncountable.
+    \item[9.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
+ Let $B_r(x) \in \mathbb{R}^n$, called an open ball of radius $r$, be defined as $\set{y \in \mathbb{R}^n | \| x-y \| < r}$ for some $r > 0$, note that $\| x-y \|$ refers to the Euclidean norm $\| x-y \| = \sqrt{\sum_{i=1}^n (x_i - y_i)^2}$. \begin{enumerate}
+        \item Let $p \in \mathbb{R}^n$ and $q \in B_r(p)$. Show that there exists $B_{r_2}(q) \subseteq B_r(p)$. (Hint: The triangle inequality works for $\|x - y\| \leq \|x - z\| + \|z -y \|$ in $\mathbb{R}^n$ too)
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] A set $E \subseteq \mathbb{R}^n$ is open if for all $p \in E$, there exists $B_r(p) \subseteq E$. Prove that $E$ is open if and only if $E$ is a union of open balls.
+    \end{enumerate}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
