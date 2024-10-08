@@ -225,7 +225,7 @@
             \begin{proof}
                 We claim the map $g([x]) = e^{2\pi i x}$ is such bijective map. \begin{itemize}
                     \item For injectivity, assume $g([x]) = g([y])$, so $ e^{2\pi i x} =  e^{2\pi i y}$. It follows that $f(x) = f(y)$ so $[x] = [y]$.
-                    \item For surjectivity, let $z \in \mathrm{Im}(f)$, so there exists $x \in \mathbb{R}$ such that $z = f(x)$. It follows that $g([x]) = e^{2\pi i x} = f(x) = z$ so $x \in g^{-1}(\set{z})$
+                    \item For surjectivity, let $z \in \mathrm{Im}(f)$, so there exists $x \in \mathbb{R}$ such that $z = f(x)$. It follows that $g([x]) = e^{2\pi i x} = f(x) = z$ so $[x] \in g^{-1}(\set{z})$
                 \end{itemize}
                 Finally, notice $g([x] + [y]) = e^{2\pi (x + y)} = e^{2\pi i x + 2\pi i y} = e^{2\pi i x} e^{2\pi i y} = g([x])g([y])$ so $g([x] + [y]) = g([x])g([y])$ and thus $g$ is such a map as required.
             \end{proof}
@@ -253,7 +253,7 @@ Let $X$ be a non-empty set. Prove that any equivalence relation on $X$ forms a p
             \textbf{Solution:}
             \begin{proof}
                 Let $P \subseteq \mathcal{P}(X)$ be a partition of $X$, and define a relation $x \sim y$ if and only if $x,y \in A_i$ where $A_i \in P$. \begin{itemize}
-                    \item Since every $x$ lies in some $A_i \in P$ by the definition of partition, $x \sim x$.
+                    \item Since every $x$ lies in some $A_i \in P$ by the definition of a partition, $x \sim x$.
                     \item If $x, y \in A_i$, then surely $y,x \in A_i$ so $x \sim y$.
                     \item Similarly, if $x ,y \in A_i$ and $y,z \in A_i$, it follows that $x , z \in A_i$ since every element lies in precisely one $A_i$.
                 \end{itemize}
