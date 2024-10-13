@@ -1,0 +1,40 @@
+\documentclass[letterpaper,12pt]{article}
+\newcommand{\myname}{Hints}
+\newcommand{\mynumber}{Hints} 
+\newcommand{\hw}{5} 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+
+\usepackage[paper=letterpaper,left=25mm,right=25mm,top=3cm,bottom=25mm]{geometry}
+
+
+\usepackage{fancyhdr} %% for details on how this work, search-engine ``fancyhdr documentation''
+\pagestyle{fancy}
+
+\lhead{Mathematics 220} % course name as top-left
+\chead{Homework \hw} % homework number in top-centre
+\rhead{ \myname \\ \mynumber }
+
+\lfoot{\myname} % name on bottom-left
+\cfoot{Page \thepage} % page in middle
+\rfoot{\mynumber} % student number on bottom-right
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+%% We also redfine the negation symbol:
+\renewcommand{\neg}{\sim}
+\newtheorem{lemma}{Lemma}[section]
+\begin{document}
+
+\subsection*{Hints to homework 5:}
+\begin{enumerate}
+\item One common trick here is to add something of the form $x - x$ (or if you prefer, $-x + x$) into the equation and that can help simplify things.
+\item Your base case is $n = 3$, so you want to show that $a_3 = 3^3 - 2^3$. In your inductive step, you will need to assume that the result holds for $n=k-1,k$. In other for both of these assumptions to work, you will need to do one more base case (namely, the base case when $n=3-1=2$). \footnote{Your inductive step assumes that I can go from $k-1$ to $k$ and it will still work, so you need to show from the base case that I can go from 1 lesser than my base case to my base case, and it will still work} 
+\item Be careful with your inductive step. You want to show that $ f_{k+2}f_{k} - {f_{k+1}}^2 = (-1)^{k+1}$. Also try expanding out some of the terms based on the sequence you are given. It is a good trick for induction involving sequences in general.
+\item If you can do (1), you can do this question. It involves a similar trick.
+\item For your inductive step, you want to show that $u_{k+1} = \cos{((k+1) x)}$ and you start with $u_{k+1} = 2u_1u_{k} - u_{k-1}$ since that is what $u_{k+1}$ is defined as based on your sequence.
+\item Try a bunch of examples. Pretty easy.
+\end{enumerate}
+In general, just be careful what your inductive step is starting off with, and what you want to end up showing. Be very careful not to accidentally assume the conclusion. Sometimes working backwards can also be harder than working forwards for induction proofs.
+\end{document}
