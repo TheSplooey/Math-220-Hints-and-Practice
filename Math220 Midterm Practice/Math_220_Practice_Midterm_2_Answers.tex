@@ -167,7 +167,7 @@
  Let $A = \set{-1, 2, \frac{1}{2}}$. Prove by induction that if 1 is written as a product $1=p_1p_2p_3\ldots p_n$ where $p_i \in A$, then $n$ is even. 
  \end{enumerate}
  \begin{mdframed}
-     \textbf{Solution 1:}
+     \textbf{Solution:}
      \begin{proof}
          Let $A$ be as stated. We proceed with mathematical induction on the number of $p_i \in A$ that are being multiplied together. \begin{itemize}
              \item For the base case, notice $1 \notin A$ so $1 \neq p_1$. The base case holds.
@@ -177,25 +177,9 @@
                  \item Assume $p_{k+1} \neq \frac{1}{p_i}$ for all $i$ such that $1 \leq i \leq k$. We split this into another proof by cases. \begin{itemize}
                      \item If $p_{k+1} = -1$, then we know for all $i$ such that $1 \leq i \leq k$, $p_i \neq -1$ so $p_1p_2 \ldots p_{k+1} < 0$ and hence cannot be 1.
                      \item If $p_{k+1} =2$, then for all $1 \leq i \leq k$, $p_{i} = 2$ or $-1$, so $|p_1 p_2 \ldots p_{k+1}| \geq 2$ and thus $p_1 p_2 \ldots p_{k+1} \neq 1$. 
-                     \item If $p_{k+1} = \frac{1}{2}$, then for all $1 \leq i \leq k$, $p_{i} = \frac{1}{2}$ or $-1$, so $0 < |p_1 p_2 \ldots p_{k+1}| \frac{1}{2}$ and thus $p_1 p_2 \ldots p_{k+1} \neq 1$. 
+                     \item If $p_{k+1} = \frac{1}{2}$, then for all $1 \leq i \leq k$, $p_{i} = \frac{1}{2}$ or $-1$, so $0 < |p_1 p_2 \ldots p_{k+1}| \leq \frac{1}{2}$ and thus $p_1 p_2 \ldots p_{k+1} \neq 1$. 
                  \end{itemize}
                 Since we have that this product is equal to 1 in none of the cases, our inductive step still holds.
-             \end{itemize}
-         \end{itemize}
-         Since both the base case and the inductive step hold, by the principle of mathematical induction, the result holds for all $n \in \mathbb{N}$.
-     \end{proof}
- \end{mdframed}
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-    \item[] \begin{mdframed}
-     \textbf{Solution 2:}
-     \begin{proof}
-         Let $A$ be as stated. We proceed with mathematical induction on the number of $p_i \in A$ that are being multiplied together. \begin{itemize}
-             \item For the base case, notice $1 \notin A$ so $1 \neq p_1$. The base case holds.
-             \item  Assume that $1=p_1p_2p_3\ldots p_k$ is only possible when $k$ is even. For $k +1$, we prove the contrapositive. Assume that $k+1$ is odd. Then, it follows that $k$ is even so $p_1p_2\ldots p_k = 1$ or $p_1p_2\ldots p_k = \neq 1$. \begin{itemize}
-                 \item If $p_1p_2\ldots p_k = 1$, then $1 \cdot p_{k+1} \neq 1$.
-                 \item 
              \end{itemize}
          \end{itemize}
          Since both the base case and the inductive step hold, by the principle of mathematical induction, the result holds for all $n \in \mathbb{N}$.
