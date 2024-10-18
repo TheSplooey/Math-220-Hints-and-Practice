@@ -30,7 +30,7 @@
 \subsection*{Hints to homework 5:}
 \begin{enumerate}
 \item One common trick here is to add something of the form $x - x$ (or if you prefer, $-x + x$) into the equation and that can help simplify things.
-\item Your base case is $n = 3$, so you want to show that $a_3 = 3^3 - 2^3$. In your inductive step, you will need to assume that the result holds for $n=k-1,k$. In other for both of these assumptions to work, you will need to do one more base case (namely, the base case when $n=3-1=2$). \footnote{Your inductive step assumes that I can go from $k-1$ to $k$ and it will still work, so you need to show from the base case that I can go from 1 lesser than my base case to my base case, and it will still work} 
+\item Your base case is $n = 3$, so you want to show that $a_3 = 3^3 - 2^3$. In your inductive step, you will need to assume that the result holds for $n=k-1,k$. In other for both of these assumptions to work, you will need to do one more base case, namely $n=3,4$. \footnote{Your inductive step assumes that I can go from $k-1$ to $k$ and it will still work, so you need to show from the base case that to my next base case, and it will still work} 
 \item Be careful with your inductive step. You want to show that $ f_{k+2}f_{k} - {f_{k+1}}^2 = (-1)^{k+1}$. Also try expanding out some of the terms based on the sequence you are given. It is a good trick for induction involving sequences in general.
 \item If you can do (1), you can do this question. It involves a similar trick.
 \item For your inductive step, you want to show that $u_{k+1} = \cos{((k+1) x)}$ and you start with $u_{k+1} = 2u_1u_{k} - u_{k-1}$ since that is what $u_{k+1}$ is defined as based on your sequence.
