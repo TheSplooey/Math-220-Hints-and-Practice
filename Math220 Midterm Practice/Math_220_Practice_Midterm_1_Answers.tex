@@ -158,15 +158,15 @@
   \textbf{Solution:}
       \begin{proof}
           Let $A$ and $S$ be as stated. We proceed with mathematical induction on the number of elements in $A$. \begin{itemize}
-        \item If $A$ has 1 element $a$, then, $S = \set{ca, c \in \mathbb{Z}}$ and since $a \in \mathbb{Q}$, the base case holds.
-        \item Assume when $A=A_{k}$ has $k$, that there exists $q \in \mathbb{Q}$ such that $S = \set{cq, c \in \mathbb{Z}}$. Consider $A=A_{k+1}$ and partition $A$ into $A\backslash \set{a}$ and $\set{a}$ for some $a \in A_{k+1}$. Notice $S$ consists of all the ways multiples of $a$ can add to multiples of elements in $ A\backslash \set{a}$, which are precisely elements in $\set{c_1 a + c_2 q| c_1,c_2 \in \mathbb{Z}}$. Since $a,q \in \mathbb{Q}$, $a = \frac{x_1}{y_1}$ and $q = \frac{x_2}{y_2}$ where $y_1,y_2 \neq 0$. Let $\frac{\gcd (y_2x_1,y_1x_2)}{y_1y_2} = u$. We claim that $\set{ cu, c \in \mathbb{Z} } = S$. \begin{itemize}
-            \item Let $p \in \set{ cu, c \in \mathbb{Z} } = S$. By Bézout's lemma, we know there exists integers $\alpha,\beta$ such that \begin{align*}
+        \item If $A$ has 1 element $a$, then, $S = \set{ca| c \in \mathbb{Z}}$ and since $a \in \mathbb{Q}$, the base case holds.
+        \item Assume when $A=A_{k}$ has $k$, that there exists $q \in \mathbb{Q}$ such that $S = \set{cq| c \in \mathbb{Z}}$. Consider $A=A_{k+1}$ and partition $A$ into $A\backslash \set{a}$ and $\set{a}$ for some $a \in A_{k+1}$. Notice $S$ consists of all the ways multiples of $a$ can add to multiples of elements in $ A\backslash \set{a}$, which are precisely elements in $\set{c_1 a + c_2 q| c_1,c_2 \in \mathbb{Z}}$. Since $a,q \in \mathbb{Q}$, $a = \frac{x_1}{y_1}$ and $q = \frac{x_2}{y_2}$ where $y_1,y_2 \neq 0$. Let $\frac{\gcd (y_2x_1,y_1x_2)}{y_1y_2} = u$. We claim that $\set{ cu| c \in \mathbb{Z} } = S$. \begin{itemize}
+            \item Let $p \in \set{ cu| c \in \mathbb{Z} } = S$. By Bézout's lemma, we know there exists integers $\alpha,\beta$ such that \begin{align*}
                 p = cu &= \frac{c( \alpha y_2x_1 + \beta y_1x_2)}{y_1y_2} \\
                 &= \frac{c\alpha y_2x_1 + c\beta y_1x_2}{y_1y_2} \\
                 &= \frac{c\alpha x_1}{y_1} + \frac{c\beta x_2}{y_2} \\
                 &= c\alpha(a) + c\beta(q)
             \end{align*}
-            so $p \in \set{c_1 a + c_2 q, c_1,c_2 \in \mathbb{Z}} = Se$, $\set{ cu, c \in \mathbb{Z} } \subseteq S$.
+            so $p \in \set{c_1 a + c_2 q| c_1,c_2 \in \mathbb{Z}} = Se$, $\set{ cu| c \in \mathbb{Z} } \subseteq S$.
             \item Let $p \in S$ so $p = c_1a + c_2 q$ for some $c_1, c_2 \in \mathbb{Z}$. Then, \begin{align*}
                 p &= \frac{c_1x_1}{y_1} + \frac{c_2 x_2}{y_2} \\
                 &= \frac{c_1y_2x_1 + c_2 y_1x_2}{y_1y_2}
@@ -176,9 +176,9 @@
                 p &= \frac{c_1\alpha \gcd (y_2x_1,y_1x_2)  + c_2 \beta \gcd (y_2x_1,y_1x_2)}{y_1y_2} \\
                 &= (c_1\alpha + c_2 \beta) u
             \end{align*}
-            so $p \in \set{ cu, c \in \mathbb{Z} }$, $\set{ cu, c \in \mathbb{Z} } \supseteq S$.
+            so $p \in \set{ cu| c \in \mathbb{Z} }$, $\set{ cu| c \in \mathbb{Z} } \supseteq S$.
         \end{itemize}
-        So there exists $q \in \mathbb{Q}$ such that $S = \set{cq, c \in \mathbb{Z}}$ as required.
+        So there exists $q \in \mathbb{Q}$ such that $S = \set{cq| c \in \mathbb{Z}}$ as required.
     \end{itemize}
     Since the base case and the inductive step hold, by the principle of mathematical induction, the result follows.
       \end{proof}
