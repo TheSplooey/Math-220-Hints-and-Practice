@@ -7,10 +7,10 @@
 \usepackage{array}
 \usepackage{marginnote}
 \lhead{MATH 220 Practice Finals 1} % course name as top-left
-\chead{Page \thepage \ of 20} % homework number in top-centre
+\chead{Page \thepage \ of 19} % homework number in top-centre
 \rhead{Student No: \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 
-\cfoot{Page \thepage \ of 20} % page in middle
+\cfoot{Page \thepage \ of 19} % page in middle
 \usepackage{ragged2e}
 
 \renewcommand{\headrulewidth}{0.4pt}
@@ -107,12 +107,12 @@
 \pagebreak
 \begin{enumerate}
     \item[] \begin{enumerate}
-        \item[(b)] For all $U \subseteq B$, $(g\circ f)^{-1}(g(U)) = f^{-1}((U))$
+        \item[(b)] For all $U \subseteq B$, $(g\circ f)^{-1}(g(U)) = f^{-1}(U)$
     \end{enumerate}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[4.]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $n \in \mathbb{N}$ be even and $\mathbb{Z} / n\mathbb{Z} = \set{0,1,2,\ldots,n-1}$. Let $S = \set{k \in \mathbb{Z} / n\mathbb{Z}| 2k \equiv 0 \mod n }$. Prove that $|S|$ is even.
+    \item[4.]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $n \in \mathbb{N}$ be even and $K = \set{0,1,2,\ldots,n-1}$. Let $S = \set{k \in K | 2k \equiv 0 \mod n }$. Prove that $|S|$ is even.
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
@@ -129,12 +129,6 @@
 \begin{enumerate}
     \item[] \begin{enumerate}
         \item[(c)] Find all equivalence classes under $R$. Show that the operation $[a] + [b] = [a+b]$ is well defined for $a,b \in \mathbb{R}$.
-    \end{enumerate}
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-    \item[] \begin{enumerate}
-        \item[(d)] Let $\mathbb{R}/R$ denotes the set of equivalence classes under $R$. Find a bijective map $g : \mathbb{R}/R \mapsto \mathrm{Im}(f)$ such that $g([x] + [y]) = g([x])g([y])$. Prove your result.
     \end{enumerate}
 \end{enumerate}
 \pagebreak
@@ -170,14 +164,14 @@ Let $X$ be a non-empty set. Prove that any equivalence relation on $X$ forms a p
 \pagebreak
 \begin{enumerate}
     \item[9.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
- Let $B_r(x) \in \mathbb{R}^n$, called an open ball of radius $r$, be defined as $\set{y \in \mathbb{R}^n | \| x-y \| < r}$ for some $r > 0$, note that $\| x-y \|$ refers to the Euclidean norm $\| x-y \| = \sqrt{\sum_{i=1}^n (x_i - y_i)^2}$. \begin{enumerate}
-        \item Let $p \in \mathbb{R}^n$ and $q \in B_r(p)$. Show that there exists $B_{r_2}(q) \subseteq B_r(p)$. (Hint: The triangle inequality works for $\|x - y\| \leq \|x - z\| + \|z -y \|$ in $\mathbb{R}^n$ too)
+ Let $B_r(\mathbf{x}) \subseteq \mathbb{R}^n$, called an open ball of radius $r$ centered at $\mathbf{x} \in \mathbb{R}^n$, be defined as $\set{\mathbf{y} \in \mathbb{R}^n | \| \mathbf{x}-\mathbf{y} \| < r}$ for some $r > 0 \in \mathbb{R}$, note that $\| \mathbf{x}-\mathbf{y} \|$ refers to the Euclidean norm where $\| \mathbf{x}-\mathbf{y} \| = \sqrt{\sum_{i=1}^n (x_i - y_i)^2}$ and $x_i,y_i \in \mathbb{R}$. \begin{enumerate}
+        \item Let $\mathbf{p} \in \mathbb{R}^n$ and $\mathbf{q} \in B_r(p)$. Show that there exists $B_{r_2}(\mathbf{q}) \subseteq B_r(p)$. (Hint: The triangle inequality works for $\|\mathbf{x} - \mathbf{y}\| \leq \|\mathbf{x} - \mathbf{z}\| + \|\mathbf{z} -\mathbf{y} \|$ in $\mathbb{R}^n$ too)
     \end{enumerate}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
     \item[] \begin{enumerate}
-        \item[(b)] A set $E \subseteq \mathbb{R}^n$ is open if for all $p \in E$, there exists $B_r(p) \subseteq E$. Prove that $E$ is open if and only if $E$ is a union of open balls.
+        \item[(b)] A set $E \subseteq \mathbb{R}^n$ is open if for all $\mathbf{p} \in E$, there exists $B_r(\mathbf{p}) \subseteq E$. Prove that $E$ is open if and only if $E$ is a union of open balls.
     \end{enumerate}
 \end{enumerate}
 \pagebreak
