@@ -56,7 +56,7 @@
 \centering
  \textbf{MATH 220 Practice Finals 1 --- October, 2024, Duration: 2.5 hours}
  \\
-\textit{This test has \textbf{10 questions} on \textbf{20 pages}, for a total of 100 points. }
+\textit{This test has \textbf{10 questions} on \textbf{19 pages}, for a total of 100 points. }
 \vspace{2cm}
 \renewcommand{\arraystretch}{2}
 \\
@@ -247,17 +247,24 @@ Let $X$ be a non-empty set. Prove that any equivalence relation on $X$ forms a p
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[7.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove that if $a \neq 0$, $\lim_{x \rightarrow a} \frac{1}{x} = \frac{1}{a}$.
+    \item[7.] 
+     \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $\set{x_n}$ be a sequence and we define a subsequence of $\set{x_n}$ as a sequence obtained from removing terms in $\set{x_n}$. \begin{enumerate}
+         \item Construct an example where $\set{x_n}$ is a sequence and two subsequences of $\set{x_n}$ both converge but converge to different limits, and justify your answer.
+     \end{enumerate}
      \begin{mdframed}
-            \textbf{Solution:}
-            \begin{proof}
-            Notice $a > 0$, or $a<0$.
-            \begin{itemize}
-                \item Let $\varepsilon > 0$ and assume $a>0$. Choose $\delta = \min(\set{b,(a^2-a)\varepsilon})$ where $0 < b < a$. Assume $0 < |x-a| < \delta$, so $|x-a| < b$ which implies $a-b < |x|$. Then, notice $\left | \frac{1}{x} - \frac{1}{a}\right | = \left |\frac{a-x}{ax} \right | < \frac{\delta}{a^2-ab} = \varepsilon$ so $\lim_{x \rightarrow a} \frac{1}{x} = \frac{1}{a}$ as required.
-                \item Let $\varepsilon > 0$ and assume $a<0$. Choose $\delta = \min(\set{-b,|a^2 - ba|\varepsilon})$ where $0 < -b < -a$. Assume $0 < |x-a| < \delta$, so $|x-a| < -b$ which implies $|a-b| < |x|$. Then, notice $\left | \frac{1}{x} - \frac{1}{a}\right | = \left |\frac{a-x}{ax} \right | < \frac{\delta}{|a^2 - ba|} = \varepsilon$ so $\lim_{x \rightarrow a} \frac{1}{x} = \frac{1}{a}$ as required.
-            \end{itemize}
-            \end{proof}
-        \end{mdframed}
+         \textbf{Solution:} Choose $\set{x_n}$ to be the sequence defined as $x_n = 1$ if $n$ is odd and $-1$ if $n$ is even. Consider the subsequences $\set{x_n}_\mathrm{odd}$ and $\set{x_n}_\mathrm{even}$. Obviously, both converge since every single term in the sequences are the same. $\set{x_n}_\mathrm{odd}$ converges to $1$ and $\set{x_n}_\mathrm{even}$ converges to $-1$ so they converge to different limits.
+     \end{mdframed}
+    \end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Prove that if a sequence $\set{x_n}$ converges to $L$ then every subsequence of $\set{x_n}$ converges to $L$.
+    \end{enumerate}
+    \begin{mdframed}
+        \textbf{Solution:} \begin{proof}
+            Assume $\set{x_n}$ converges to $L$. Let $\set{y_n}$ be a subsequence of $\set{x_n}$ and $\varepsilon > 0$. Choose $N_y \in \mathbb{N}$ to be any $N_y$ such that $N_y \geq N_x$ and $x_{N_y} \in \set{y_n}$ where $N_x$ is the choice for $N$ for $\set{x_n}$ by the convergence of $\set{x_n}$. Since $\set{y_n}$ cannot terminate before $y_{N_y}$, and for all $n > N_y$, we have $y_n = x_m$ where $m > N_y$ and so $m > N_y \geq N_x$, it follows that $|y_n - L| = |x_m - L|<\varepsilon$ so $\set{y_n}$ converges to $L$ as required.
+        \end{proof}
+    \end{mdframed}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
@@ -320,25 +327,10 @@ Let $X$ be a non-empty set. Prove that any equivalence relation on $X$ forms a p
 \pagebreak
 \begin{enumerate}
     \item[10.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
-Let $N= \set{1,2,3,\ldots,n}$ for some $n \in \mathbb{N}$, and let $S_n$ be the set of bijective functions $f: N \mapsto N$. \begin{enumerate}
-    \item Prove by induction that for all $n \in \mathbb{N}$, $|S_n|=n!$.
-\end{enumerate}
- \begin{mdframed}
-            \textbf{Solution:}
-            \begin{proof}
-               Let $N= \set{1,2,3,\ldots,n}$ for some $n \in \mathbb{N}$, and let $S_n$ be the set of bijective functions $f: N \mapsto N$. We proceed with mathematical induction on $n$. \begin{itemize}
-                   \item For the base case, notice when $n = 1$, the only bijective map is $f(n) = 1$ so $S_n = \set{f}$ and $|S_n| = 1$.
-                   \item Assume that for $n = k$, $|S_k| = k$. For $|S_{k+1}|$, notice taking every map in $S_k$ and fixing an element yields $k!$ bijections and hence elements in $S_{k+1}$, and fixing and repeating this process with a different element in $N = \set{1,2,3,\ldots,k+1}$ will give $(k+1)k!$ possible bijections from $N$ to itself and hence $(k+1)!$ bijections. It follows that $|S_{k+1} | = (k+1)!$ as required.
-               \end{itemize} 
-               By the principle of mathematical induction, $|S_n| = n!$ for all $n \in \mathbb{N}$.
-            \end{proof}
-        \end{mdframed}
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-   \item[] \begin{enumerate}
-       \item[(b)]  Prove by induction that for all $n \geq 3 \in \mathbb{N}$, there exists $f,g \in S_n$ such that $f \circ g \neq g \circ f$.
+Let $N= \set{1,2,3,\ldots,n}$ for some $n \in \mathbb{N}$, and let $S_n$ be the set of bijective functions $f: N \mapsto N$. Prove by induction that for all $n \geq 3 \in \mathbb{N}$, there exists $f,g \in S_n$ such that $f \circ g \neq g \circ f$.
    \end{enumerate}
+   \begin{enumerate}
+       \item[]
     \begin{mdframed}
             \textbf{Solution:}
             \begin{proof}
@@ -353,5 +345,5 @@ Let $N= \set{1,2,3,\ldots,n}$ for some $n \in \mathbb{N}$, and let $S_n$ be the 
               By the principle of mathematical induction, the result holds for all $n \geq 3$.
             \end{proof}
         \end{mdframed}
-\end{enumerate}
+    \end{enumerate}
 \end{document}
