@@ -6,11 +6,11 @@
 \pagestyle{fancy}
 \usepackage{array}
 \usepackage{marginnote}
-\lhead{MATH 220 Practice Midterm} % course name as top-left
-\chead{Page \thepage \ of X} % homework number in top-centre
-\rhead{Answer Key}
+\lhead{MATH 220 Practice Finals 1} % course name as top-left
+\chead{Page \thepage \ of 19} % homework number in top-centre
+\rhead{Student No: \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 
-\cfoot{Page \thepage \ of X} % page in middle
+\cfoot{Page \thepage \ of 19} % page in middle
 \usepackage{ragged2e}
 
 \renewcommand{\headrulewidth}{0.4pt}
@@ -54,9 +54,9 @@
 }
 \begin{document}
 \centering
- \textbf{MATH 220 Practice Midterm --- September, 2024, Duration: 50 minutes}
+ \textbf{MATH 220 Practice Finals 1 --- October, 2024, Duration: 2.5 hours}
  \\
-\textit{This test has \textbf{5 questions} on \textbf{8 pages}, for a total of 50 points. }
+\textit{This test has \textbf{10 questions} on \textbf{19 pages}, for a total of 100 points. }
 \vspace{2cm}
 \renewcommand{\arraystretch}{2}
 \\
@@ -73,144 +73,277 @@
 \vspace{1.5cm}
 \begin{tabular}{ | P{1.7cm} | P{0.4cm}| P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}} 
   \hline
- Question: &1 & 2&3&4&5 \\
+ Question: &1 & 2&3&4&5&6&7&8&9&10 \\
  \hline
- Points: & & & & &    \\
+ Points: & & & & & & & & & &     \\
   \hline
-  Total:  & \multicolumn{5}{| r |}{/50} \\
+  Total:  & \multicolumn{10}{| r |}{/100} \\
   \hline
 \end{tabular}
 \clearpage
 \begin{enumerate}
-    \item[1.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Negate each of the following and prove or disprove the original statement: \begin{enumerate}
-        \item For all $x \in \mathbb{R}$, there exists $q \in \mathbb{Q}$ such that for all $r < q \in \mathbb{Q}$, $r+q < x$".  
-    \end{enumerate}
-    \begin{mdframed}
-            \textbf{Solution:}
-            The negation is "There exists $x \in \mathbb{R}$ such that for all $q \in \mathbb{Q}$, there exists $r < q \in \mathbb{Q}$ such that $r + q \geq x$.
-            \begin{proof}
-                Let $x \in \mathbb{R}$. Pick $q = \frac{\lfloor x \rfloor}{2} - 1 \in \mathbb{Q}$. Notice for all $r < q \in \mathbb{Q}$, $r+q < 2q = \lfloor x \rfloor -2 \leq x - 2 < x$ so the result holds.
-            \end{proof}
-        \end{mdframed}
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-    \item[] \begin{enumerate}
-        \item[(b)] For all $x \in \mathbb{R}$, there exists $y \in \mathbb{R}$ such that for all $z \in \mathbb{R}$, if $xy < z$ then $x < 0$ or $x^2 + y^2 < z$ 
-    \end{enumerate}
-    \begin{mdframed}
-            \textbf{Solution:}
-            The negation is "There exists $x \in \mathbb{R}$ such that for all $y \in \mathbb{R}$, there exists $z \in \mathbb{R}$ such that $xy < z$ and $x \geq 0$ and $x^2 + y^2 \geq z$".
-            \renewcommand{\proofname}{Disproof} \begin{proof}
-                Choose $x = 2$ and let $y \in \mathbb{R}$. Choose $z = 4 + y^2$. Notice $x \geq 0$ and $z \leq 4 + y^2 = x^2 + y^2$. Now, notice $y^2 - 2y + 4 = (y-1)^2 + 2 \geq 2 > 0$, so \begin{align*}
-                    y^2 -2y + 4 &> 0 \\
-                    y^2 + 4 &> 2y \\
-                    z = x^2 + y^2 &> xy
-                \end{align*}
-                and thus $xy < z$. This proves the negation and thus disproves the original statement.
-            \end{proof}
-        \end{mdframed}
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-    \item[2.]  \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $p \in \mathbb{N}$ and assume $p > 1$. Prove that if there exists $x \in \mathbb{Z}$ with $x \not \equiv 0 \mod p$ such that for all $y \in \mathbb{Z}$, $xy \not \equiv 1 \mod p$, then $p$ is not prime.
-    \begin{mdframed}
-        \textbf{Solution:} \begin{proof}
-            We prove the contrapositive. Let $p \in \mathbb{N}$ be prime. Let $x \in \mathbb{Z}$ and assume $x \not \equiv 0 \mod p$. Then, we know $x \equiv r \mod p$ for some $1 \leq r < p$. By Bézout's lemma, we know there exists $\alpha,\beta \in \mathbb{Z}$ such that $\alpha r + \beta p = \gcd (r,p) = 1$ so $\alpha r = 1 - \beta p$. It follows that $\alpha r \equiv 1 \mod p$ so choosing such $\alpha = y$ would yield $xy \equiv 1 \mod p$ as required.
-        \end{proof}
-    \end{mdframed}
-\end{enumerate}
-\pagebreak
-\begin{enumerate}
-    \item[3. ]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $a,b \in \mathbb{Z}$ where $a,b \neq 0$ and $S = \set{ax + by | x,y \in \mathbb{Z}, ax + by > 0}$. You may not use Bézout's lemma for this section. \begin{enumerate}
-        \item Prove that $S$ is non-empty. 
-            \begin{mdframed}
-                \textbf{Solution:}
-                \begin{proof}
-                    Notice $a \in S$ so $S$ is non-empty.
-                \end{proof}
-            \end{mdframed}
-            \vspace{0.2in}
-        \item Prove that the minimal element $d = as + bt \in S$ for some $s,t \in \mathbb{Z}$ divides both $a$ and $b$. (Hint: Euclidean division of $a$ by $d$ and $b$ by $d$)
+    \item[1.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Carefully define or restate each of the following: \begin{enumerate}
+        \item A rational number $q \in \mathbb{Q}$
         \begin{mdframed}
-            \textbf{Solution:} \begin{proof}
-                Let $S$ be as stated and let $d$ be the minimal element of $S$. By Euclidean division, we know there exists $m, r \in \mathbb{Z}$ such that $a = md + r$, $0 \leq r < d$. Notice $r = a - md = a - mas - mbt = a(1-ms) + b(-mt)$ so $r \in S \cup \set{0}$. By assumption, we have $d$ is the minimal element in $S$, but $0 \leq r < d$ so $r = 0$. Likewise, there exists $n, r \in \mathbb{Z}$ such that $b = nd + r$, $0 \leq r < d$. It follows that $r = a(-ns) + b(1-nt)$ so $r \in S \cup \set{0}$, and by $d$ is the minimal element, we have $r = 0$. It follows that $a = md$ and $b = nd$ so $d \mid a$ and $d \mid b$.
-            \end{proof}
+            \textbf{Solution:}
+            $q \in \mathbb{Q}$ if there exists coprime $a,b \in \mathbb{Z}$ where $b \neq 0$ such that $q = \frac{a}{b}$.
+        \end{mdframed}
+        \vspace{0.5in}
+        \item Bézout's lemma
+                 \begin{mdframed}
+            \textbf{Solution:}
+            For all $a,b \in \mathbb{Z}$, there exists $x,y \in \mathbb{Z}$ such that $ax + by = \gcd (a,b)$
+        \end{mdframed}
+                \vspace{0.5in}
+        \item The Fundamental Theorem of Arithmetic
+                 \begin{mdframed}
+            \textbf{Solution:}
+            Let $n \in \mathbb{N}$. Then, $n$ can be uniquely factorised into a product of prime powers ${p_1}^{e_1}{p_2}^{e_2}\ldots {p_n}^{e_n}$ up to order, where $p_i$ are distinct primes and $e_i \in \mathbb{Z}$.
+        \end{mdframed}
+                \vspace{0.3in}
+        \item A convergent sequence $(x_n)_{n \in \mathbb{N}} : \mathbb{N} \mapsto \mathbb{R}$
+                 \begin{mdframed}
+            \textbf{Solution:}
+             $(x_n)_{n \in \mathbb{N}} : \mathbb{N} \mapsto \mathbb{R}$ converges to $L \in \mathbb{R}$ if for all $\varepsilon > 0 \in \mathbb{R}$, there exists $N \in \mathbb{N}$ such that for all $n > N$, $|x_n - L | < \varepsilon$.
+        \end{mdframed}
+                \vspace{0.3in}
+        \item The principle of mathematical induction
+         \begin{mdframed}
+            \textbf{Solution:}
+            Let $\ell \in \mathbb{Z}$ and let $S = \set{k \in \mathbb{Z} | n \geq \ell}$. If $P(\ell)$ is true and $P(k)$ being true implies $P(k+1)$ being true for some $k \in S$, then $P(n)$ is true for all $n \in S$.
         \end{mdframed}
     \end{enumerate}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
+    \item[2.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Write the negation of each of the following and prove or disprove the original statement.
+    \begin{enumerate}
+        \item For all $x \in \mathbb{R}$, there exists $y \in \mathbb{R}$ such that for all $z \in \mathbb{R}$, if $x + y < z$, then $x -y > z$.
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:} The negation is "There exists $x \in \mathbb{R}$ such that for all $y \in \mathbb{R}$, there exists $z \in \mathbb{R}$ such that $x+y < z$ and $x-y \leq z$". The original statement is false. \renewcommand{\proofname}{Disproof} \begin{proof}
+                Let $x = 0$ and $y \in \mathbb{R}$. Choose $z = |y| + 1$. Notice $\pm y \leq |y| <  1 + |y|$, so $z > x+y$ and $z > x-y$ so the statement is false. 
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
     \item[] \begin{enumerate}
-        \item[(c)] Prove that if $c \mid a$ and $c \mid b$, then $c \leq d$.
+        \item[(b)] There exists $x \in \mathbb{R}$ such that for all $y \in \mathbb{R}$, for all $z \in \mathbb{R}$, $xy > z$.
+        
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:} The negation is "For all $x \in \mathbb{R}$, there exists $y \in \mathbb{R}$ such that there exists $z \in \mathbb{R}$ such that $xy \leq z$". The original statement is false. \renewcommand{\proofname}{Disproof} \begin{proof}
+                Let $x \in \mathbb{R}$ and choose $y = z = 0$. Then, $xy = 0 = z$ so the statement is false. 
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[3. ]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $f: A \mapsto B$ and $g: B \mapsto C$ be functions. Prove or disprove each of the following: \begin{enumerate}
+        \item For all $U \subseteq C$, $(g \circ f)^{-1} (U) = f^{-1}(g^{-1}(U))$.
+        
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:} 
+           \begin{proof}
+              Let everything be as stated. We show each inclusion in turn. \begin{itemize}
+                  \item Assume $x \notin f^{-1}(g^{-1}(U))$, so $f(x) \notin g^{-1}(U)$ and $g(f (x)) \notin U$. It follows that $x \notin (g \circ f)^{-1} (U)$, so by contraposition, $(g \circ f)^{-1} (U) \subseteq f^{-1}(g^{-1}(U))$
+                  \item Assume $x \in f^{-1}(g^{-1}(U))$. Then, $f(x) \in g^{-1}(U)$ and $g(f(x)) \in U$ so $(g \circ f)^{-1} (U) \subseteq f^{-1}(g^{-1}(U))$.
+              \end{itemize}
+              It follows that $(g \circ f)^{-1} (U) = f^{-1}(g^{-1}(U))$. as required.
+           \end{proof} 
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] For all $U \subseteq B$, $(g\circ f)^{-1}(g(U)) = f^{-1}(U)$
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:}
+            \renewcommand{\proofname}{Disproof} \begin{proof}
+                Let $A = \set{1} = C$, $B = \set{0,1}$, $f(x) = 1$ and $g(x) = 1$. Then, notice for $U = \set{0}$, $f^{-1}((U)) = \varnothing$, but $(g\circ f)^{-1}g(U) = (g\circ f)^{-1} (\set{1}) = \set{1}$ so $(g\circ f)^{-1}(g(U)) \neq f^{-1}((U))$ and thus the statement is false.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[4.]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $n \in \mathbb{N}$ be even and $K = \set{0,1,2,\ldots,n-1}$. Let $S = \set{k \in K  | 2k \equiv 0 \mod n }$. Prove that $|S|$ is even.
+     \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                Assume for the sake of contradiction that $|S|$ is not even, so for there exists an odd number of elements $k \in K$ such that $2k \equiv 0 \mod n$. Consider $K-S$, which has an odd number of elements. Let $a \in K-S$. Since $2a \not \equiv 0 \mod n$, it follows that there exists $a^{-1} \in K-S$ such that $a + a^{-1} \equiv 0 \mod n$, but there are only an odd number of $a$ so there exists $a_0 \in K-S $ such that $a_0 = {a_0}^{-1}$ which implies $2a_0 \equiv 0 \mod n$, a contradiction. Hence, $|S|$ is even as required.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[5.] \begin{enumerate} \item \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove that $f: \mathbb{R} \mapsto \mathbb{C}\backslash \set{0}$ where $f(x) = e^{2\pi i x}$ is neither injective nor surjective and for all $x,y \in \mathbb{R}$, $f(x+y) = f(x)f(y)$. \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                Notice $0 \neq 1$ but $f(0) = f(1) = 0 \in \mathbb{C}$ so $f$ is not injective. Also notice there does not exist $x \in \mathbb{R}$ such that $f(x) = 0$ since $e^{2\pi i x} \neq 0$ for all $x \in \mathbb{R}$. Hence, $f$ is not surjective. Finally, let $x,y \in \mathbb{R}$. Observe that $f(x+y) = e^{2\pi i (x+y)} = e^{2\pi i x + 2\pi i y} = e^{2\pi i x} e^{2\pi i y} = f(x)f(y)$ so $f(x+y) = f(x)f(y)$ as required.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Let $R$ be a relation on $\mathbb{R}$ be defined as $x R y$ if and only if $x = y + z$ where $z \in f^{-1}(\set{1})$. Prove that $R$ is an equivalence relation.
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof} We prove reflexivity, symmetry, and transitivity in turn. \begin{itemize}
+                \item Notice $x = x + 0$ and $0 \in f^{-1}(\set{1})$ so $x R x$ as required.
+                \item Assume $x R y$. Then, notice $y = x - z$ and since $f(-z) = e^{-2\pi i z} = \frac{1}{f(z)} = 1$, we have $-z \in f^{-1}(\set{1})$ and so $y R x$.
+                \item Assume $x R y$ and $y R w$. Then, $x = y + z_1$ and $y = w + z_2$ so $x = w + z_2 + z_1$. Now notice $f(z_2+z_1) = f(z_2)f(z_1) = 1 \cdot 1 = 1$ so $z_2 + z_1 \in f^{-1}(\set{1})$ and thus $x R w$
+            \end{itemize}
+            It follows that $R$ is an equivalence relation. \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(c)] Find all equivalence classes under $R$. Show that the operation $[a] + [b] = [a+b]$ is well defined for $a,b \in \mathbb{R}$. 
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+            There are infinite equivalence classes. In particular, for all $x \in [0,1)$, there exists an equivalence class of the form $[x] = \set{k + x | k \in \mathbb{Z}}$. For showing the operation is well defined, we claim that $x Ry$ if and only if $f(x) = f(y)$. Assume $x = y + z$ where $z \in f^{-1}(\set{1})$. Then, $f(x) = f(y+z) = f(y)f(z) = f(y)$ so $f(y) = f(x)$. On the other hand, assume $f(x) = f(y)$. Notice for all $k \in \mathbb{Z}$, $f(k) = 1$. Then, $f(x)f(z_1) = f(x)1 = f(y)1 = f(y)f(z_2) = f(y+z_2)$ where $z_1,z_2 \in f^{-1}(\set{1})$ so $x = y + z_2 - z_1$ and since $z_2-z_1 \in f^{-1}(\set{1})$, $x R y$. Let $a, b \in \mathbb{R}$. Since for all $y \in [a+b]$, $f(y) = f(a+b)$, it suffices to show that for all $x \in [a] + [b], f(x) = f(a+b)$. Notice since $x \in [a] + [b]$, $x = a + z_1 + b + z_2$ where $z_1,z_2 \in f^{-1}(\set{1})$ so $f(x) = f(a+z_1+b+z_2) = f(a)f(z_1)f(b)f(z_2) = f(a)f(b) = f(a+b)$ so $x \in [a+b]$. Hence, the operation is well defined.
+            
+        \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[6.]  \begin{enumerate}
+    \item \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
+Let $X$ be a non-empty set. Prove that any equivalence relation on $X$ forms a partition on $X$.
+\end{enumerate}
+ \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+               Let $\sim$ be an equivalence relation on $X$. By reflexivity, we have that for all $x \in X$, $x$ lies in some equivalence class and thus every equivalence class is non-empty. For showing that equivalence classes are disjoint, suppose $x \in [a]$ and $x \in [b]$, so $x \sim a$ and $x \sim b$. By symmetry and transitivity, we have $a \sim x$ and $x \sim b$ so $[a] = [b]$. Thus, equivalence classes are disjoint. It follows that the equivalence classes of an equivalence relation partition a set.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Prove that any partition on $X$ corresponds to equivalence classes of an equivalence relation on $X$.
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                Let $P \subseteq \mathcal{P}(X)$ be a partition of $X$, and define a relation $x \sim y$ if and only if $x,y \in A_i$ where $A_i \in P$. \begin{itemize}
+                    \item Since every $x$ lies in some $A_i \in P$ by the definition of a partition, $x \sim x$.
+                    \item If $x, y \in A_i$, then surely $y,x \in A_i$ so $x \sim y$.
+                    \item Similarly, if $x ,y \in A_i$ and $y,z \in A_i$, it follows that $x , z \in A_i$ since every element lies in precisely one $A_i$.
+                \end{itemize}
+                Hence, $\sim$ is an equivalence relation and by our choice of equivalence relation, we have that every equivalence class corresponds precisely to some $A_i \in P$.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[7.] 
+     \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $\set{x_n}$ be a sequence and we define a subsequence of $\set{x_n}$ as a sequence obtained from removing terms in $\set{x_n}$. \begin{enumerate}
+         \item Construct an example where $\set{x_n}$ is a sequence and two subsequences of $\set{x_n}$ both converge but converge to different limits, and justify your answer.
+     \end{enumerate}
+     \begin{mdframed}
+         \textbf{Solution:} Choose $\set{x_n}$ to be the sequence defined as $x_n = 1$ if $n$ is odd and $-1$ if $n$ is even. Consider the subsequences $\set{x_n}_\mathrm{odd}$ and $\set{x_n}_\mathrm{even}$. Obviously, both converge since every single term in the sequences are the same. $\set{x_n}_\mathrm{odd}$ converges to $1$ and $\set{x_n}_\mathrm{even}$ converges to $-1$ so they converge to different limits.
+     \end{mdframed}
+    \end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Prove that if a sequence $\set{x_n}$ converges to $L$ then every subsequence of $\set{x_n}$ converges to $L$.
     \end{enumerate}
     \begin{mdframed}
         \textbf{Solution:} \begin{proof}
-            Let $S$ and $d$ be as stated and assume $c \mid a$ and $c \mid b$, so $a = ck$ and $b = c\ell$ for some $k,\ell \in \mathbb{Z}$. Notice $d = as + bt = c(sk + t\ell)$ so $c \mid d$. By assumption, since $d \in S$, $d > 0$, so $c \leq d$ as required.
+            Assume $\set{x_n}$ converges to $L$. Let $\set{y_n}$ be a subsequence of $\set{x_n}$ and $\varepsilon > 0$. Choose $N_y \in \mathbb{N}$ to be any $N_y$ such that $N_y \geq N_x$ and $x_{N_y} \in \set{y_n}$ where $N_x$ is the choice for $N$ for $\set{x_n}$ by the convergence of $\set{x_n}$. Since $\set{y_n}$ cannot terminate before $y_{N_y}$, and for all $n > N_y$, we have $y_n = x_m$ where $m > N_y$ and so $m > N_y \geq N_x$, it follows that $|y_n - L| = |x_m - L|<\varepsilon$ so $\set{y_n}$ converges to $L$ as required.
         \end{proof}
     \end{mdframed}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[4.]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
-  Let $A = \set{a_1,a_2,\ldots,a_n} \subseteq \mathbb{Q}$ and $S = \set{c_1a_1 + c_2a_2 + \ldots + c_n a_n |  c_i  \in \mathbb{Z}}$. Prove by induction that if $A$ has $n \in \mathbb{N}$ elements, then there exists $q \in \mathbb{Q}$ such that $S = \set{cq| c \in \mathbb{Z}}$. (Hint: Show that $S \subseteq \set{cq| c \in \mathbb{Z}}$ and $S \supseteq \set{cq| c \in \mathbb{Z}}$ and find $q$ in your inductive step)
-  \begin{mdframed}
-  \textbf{Solution:}
-      \begin{proof}
-          Let $A$ and $S$ be as stated. We proceed with mathematical induction on the number of elements in $A$. \begin{itemize}
-        \item If $A$ has 1 element $a$, then, $S = \set{ca| c \in \mathbb{Z}}$ and since $a \in \mathbb{Q}$, the base case holds.
-        \item Assume when $A=A_{k}$ has $k$, that there exists $q \in \mathbb{Q}$ such that $S = \set{cq| c \in \mathbb{Z}}$. Consider $A=A_{k+1}$ and partition $A$ into $A\backslash \set{a}$ and $\set{a}$ for some $a \in A_{k+1}$. Notice $S$ consists of all the ways multiples of $a$ can add to multiples of elements in $ A\backslash \set{a}$, which are precisely elements in $\set{c_1 a + c_2 q| c_1,c_2 \in \mathbb{Z}}$. Since $a,q \in \mathbb{Q}$, $a = \frac{x_1}{y_1}$ and $q = \frac{x_2}{y_2}$ where $y_1,y_2 \neq 0$. Let $\frac{\gcd (y_2x_1,y_1x_2)}{y_1y_2} = u$. We claim that $\set{ cu| c \in \mathbb{Z} } = S$. \begin{itemize}
-            \item Let $p \in \set{ cu| c \in \mathbb{Z} } = S$. By Bézout's lemma, we know there exists integers $\alpha,\beta$ such that \begin{align*}
-                p = cu &= \frac{c( \alpha y_2x_1 + \beta y_1x_2)}{y_1y_2} \\
-                &= \frac{c\alpha y_2x_1 + c\beta y_1x_2}{y_1y_2} \\
-                &= \frac{c\alpha x_1}{y_1} + \frac{c\beta x_2}{y_2} \\
-                &= c\alpha(a) + c\beta(q)
-            \end{align*}
-            so $p \in \set{c_1 a + c_2 q| c_1,c_2 \in \mathbb{Z}} = Se$, $\set{ cu| c \in \mathbb{Z} } \subseteq S$.
-            \item Let $p \in S$ so $p = c_1a + c_2 q$ for some $c_1, c_2 \in \mathbb{Z}$. Then, \begin{align*}
-                p &= \frac{c_1x_1}{y_1} + \frac{c_2 x_2}{y_2} \\
-                &= \frac{c_1y_2x_1 + c_2 y_1x_2}{y_1y_2}
-            \end{align*}
-            Notice $\gcd (y_2x_1,y_1x_2) \mid y_2x_1$ and $\gcd (y_2x_1,y_1x_2) \mid y_1x_2$, so $$y_2x_1 = \alpha \gcd (y_2x_1,y_1x_2)$$ $$y_1x_2 = \beta \gcd (y_2x_1,y_1x_2)$$ where $\alpha,\beta \in \mathbb{Z}$ and thus
-            \begin{align*}
-                p &= \frac{c_1\alpha \gcd (y_2x_1,y_1x_2)  + c_2 \beta \gcd (y_2x_1,y_1x_2)}{y_1y_2} \\
-                &= (c_1\alpha + c_2 \beta) u
-            \end{align*}
-            so $p \in \set{ cu| c \in \mathbb{Z} }$, $\set{ cu| c \in \mathbb{Z} } \supseteq S$.
-        \end{itemize}
-        So there exists $q \in \mathbb{Q}$ such that $S = \set{cq| c \in \mathbb{Z}}$ as required.
-    \end{itemize}
-    Since the base case and the inductive step hold, by the principle of mathematical induction, the result follows.
-      \end{proof}
-  \end{mdframed}
+    \item[8.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove or disprove each of the following: \begin{enumerate}
+        \item Let $A,B \subseteq C$. If $|C \backslash A| = |C \backslash B|$, then $|A| = |B|$.
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:}
+            \renewcommand{\proofname}{Disproof}
+            \begin{proof}
+                 Let $A  = \set{1}$, $B = \set{1,2}$ and $C = \mathbb{N}$. Notice there exists an explicit bijection $f: C \backslash A \mapsto  C \backslash B$ where $f(n) = n+1$, but $|A| = 1 \neq 2 = |B|$ so the statement is false.
+            \end{proof}
+        \end{mdframed}
 \end{enumerate}
 \pagebreak
 \begin{enumerate}
-    \item[5.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove or disprove that the sequence $(x_n)_{n \in \mathbb{N}} = \frac{1\cdot 3 \cdot 5 \cdot \ldots \cdot (2n-1)}{2 \cdot 4 \cdot 6 \cdot \ldots (2n)}$ converges. (Hint: Consider an inequality between this sequence and $\frac{1}{\sqrt{3n+1}}$)
-\begin{mdframed}
-\textbf{Solution:}
-    \begin{proof}
-        We first prove that for all $n \in \mathbb{N}$, $\frac{1\cdot 3 \cdot 5 \cdot \ldots \cdot (2n-1)}{2 \cdot 4 \cdot 6 \cdot \ldots (2n)} \leq \frac{1}{\sqrt{3n+1}}$. We proceed with induction. \begin{itemize}
-            \item For the base case, $\frac{1}{2} = \frac{1}{\sqrt{4}} =\frac{1}{\sqrt{3+ 1}}$ so the base case holds.
-            \item Assume that the result holds for $n = k$. Then, for $k+1$, by assumption,
-            \begin{align*}
-              \frac{1\cdot 3 \cdot 5 \cdot \ldots \cdot (2n-1)(2n+1)}{2 \cdot 4 \cdot 6 \cdot \ldots (2n)(2n+2)}  &\leq \frac{(2n+1)}{\sqrt{3n-1}(2n+2)} \\
-              &= \sqrt{\frac{(2n+1)^2}{(3n+1)(2n+2)^2}} \\
-              &=  \sqrt{\frac{(2n+2)^2}{12n^3+28n^2+20n+4}} \\
-              &\leq \sqrt{\frac{(2n+2)^2}{12n^3+28n^2+19n+4}} \\
-              &= \sqrt{\frac{1}{(3n+4)}}
-            \end{align*}
-            so the inductive step holds
-        \end{itemize}
-        Since the base case and inductive step hold, this proves that $n \in \mathbb{N}$, $\frac{1\cdot 3 \cdot 5 \cdot \ldots \cdot (2n-1)}{2 \cdot 4 \cdot 6 \cdot \ldots (2n)} \leq \frac{1}{\sqrt{3n+1}}$. Now, let $\varepsilon > 0$ and choose $N = \left \lceil\frac{ 1  }{3\varepsilon^2}\right \rceil \in \mathbb{N}$. Notice, for all $n > N$, \begin{align*}
-             \left | \frac{1\cdot 3 \cdot 5 \cdot \ldots \cdot (2n-1)}{2 \cdot 4 \cdot 6 \cdot \ldots (2n)}\right | &\leq   \left |\frac{1\cdot 3 \cdot 5 \cdot \ldots \cdot (2N-1)}{2 \cdot 4 \cdot 6 \cdot \ldots (2N)} \right| \\
-             &\leq \left | \frac{1}{\sqrt{3N+1}} \right | \\
-             &<  \frac{1}{\sqrt{3N}} \\
-              &= \frac{1}{\sqrt{3\left \lceil\frac{ 1 }{3\varepsilon^2}\right \rceil }} \\
-              &\leq \frac{1}{\sqrt{ \frac{ 3  }{3\varepsilon^2} }} = \varepsilon
-        \end{align*}
-        So $(x_n)_{n\in \mathbb{N}}$ converges as required.
-    \end{proof}
-    \end{mdframed}
+    \item[] \begin{enumerate}
+        \item[(b)] Let $A_i \in X$. Then, $X \backslash (\bigcup_{i \in I} A_i)   = \bigcap_{i \in I} (X \backslash A_i )$.
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                Let $A_i \in X$ and $x \in X$. We show each inclusion in turn.
+                \begin{itemize}
+                    \item Let $x \in X \backslash (\bigcup_{i \in I} A_i)$, so $x \notin (\bigcup_{i \in I} A_i)$ and thus $x \notin A_i$ for all $i \in I$. It follows that $x \in A_i \backslash X$ for all $i$ and thus $x \in  \bigcap_{i \in I} (X \backslash A_i)$.
+                    \item Let $x \in  \bigcap_{i \in I} (X \backslash A_i)$ so for all $i \in I$, $x \notin A_i$. It follows that $x \notin \bigcup_{i \in I} A_i$ so $x \in X \backslash (\bigcup_{i \in I} A_i)$.
+                \end{itemize}
+                Hence, $X \backslash (\bigcup_{i \in I} A_i)   = \bigcap_{i \in I} (X \backslash A_i )$.
+            \end{proof}
+        \end{mdframed}
 \end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[9.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
+ Let $B_r(\mathbf{x}) \subseteq \mathbb{R}^n$, called an open ball of radius $r$ centered at $\mathbf{x} \in \mathbb{R}^n$, be defined as $\set{\mathbf{y} \in \mathbb{R}^n | \| \mathbf{x}-\mathbf{y} \| < r}$ for some $r > 0 \in \mathbb{R}$, note that $\| \mathbf{x}-\mathbf{y} \|$ refers to the Euclidean norm where $\| \mathbf{x}-\mathbf{y} \| = \sqrt{\sum_{i=1}^n (x_i - y_i)^2}$ and $x_i,y_i \in \mathbb{R}$. \begin{enumerate}
+        \item Let $\mathbf{p} \in \mathbb{R}^n$ and $\mathbf{q} \in B_r(p)$. Show that there exists $B_{r_2}(\mathbf{q}) \subseteq B_r(p)$. (Hint: The triangle inequality works for $\|\mathbf{x} - \mathbf{y}\| \leq \|\mathbf{x} - \mathbf{z}\| + \|\mathbf{z} -\mathbf{y} \|$ in $\mathbb{R}^n$ too)
+    \end{enumerate}
+      \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                Let $\mathbf{q} \in B_r(\mathbf{p})$. Choose $r_2 = r - \| \mathbf{p}-\mathbf{q}\|$ and $q \in B_{r_2}(\mathbf{q})$. Now, $r > \|  \mathbf{p}-\mathbf{q}\|$ so $r_2 > 0$. Let $x \in B_{r_2}(\mathbf{q})$. By the triangle inequality, $\|\mathbf{p}-\mathbf{x} \| \leq \| \mathbf{p}-\mathbf{q}\| + \|\mathbf{q}-\mathbf{x}\| < \|\mathbf{p}-\mathbf{q}\| + r_2 = r$ so $B_{r_2}(\mathbf{q}) \subseteq B_r(\mathbf{p})$. 
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] A set $E \subseteq \mathbb{R}^n$ is open if for all $\mathbf{p} \in E$, there exists $B_r(\mathbf{p}) \subseteq E$. Prove that $E$ is open if and only if $E$ is a union of open balls.
+    \end{enumerate}
+      \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+               We prove each direction in turn. \begin{itemize}
+                    \item For one direction, suppose $E$ is open. I claim $E = \bigcup_{\mathbf{x} \in E} B_r(\mathbf{x})$ where $B_r(\mathbf{x})$ is some open ball centered at $\mathbf{x}$ contained in $E$. Notice this yields $\bigcup_{\mathbf{x} \in E} B_r(\mathbf{x}) \subseteq E$. On the other hand, if $\mathbf{x} \in E$, we know $\mathbf{x} \in B_r(\mathbf{x}) \subseteq E$ for some $r > 0$ by $E$ is open, so $\mathbf{x} \in \cup_{\mathbf{x} \in E} B_r(\mathbf{x})$. This proves $E = \cup_{\mathbf{x} \in E} B_r(\mathbf{x})$ so $E$ is a union of open balls.
+                    \item For the other direction, suppose $E$ is a union of open balls $\set{B_i}$, and let $\mathbf{x} \in E$. By definition, $x \in {B}_0$ for some ${B}_0 \in \set{B_i}$ and from part (a), we know there exists $B_r(\mathbf{x}) \subseteq {B}_0 \subseteq E$ so $E$ is open as required.
+                \end{itemize}
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[10.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
+Let $N= \set{1,2,3,\ldots,n}$ for some $n \in \mathbb{N}$, and let $S_n$ be the set of bijective functions $f: N \mapsto N$. Prove by induction that for all $n \geq 3 \in \mathbb{N}$, there exists $f,g \in S_n$ such that $f \circ g \neq g \circ f$.
+   \end{enumerate}
+   \begin{enumerate}
+       \item[]
+    \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+            Let $n \geq 3$. We proceed with mathematical induction on $n$. \begin{itemize}
+                \item For the base case, let $f$ and $g$ in $S_3$ be defined as follows: $$f(n) = \left \{\begin{matrix}
+                    1 \mapsto 2 \\ 2 \mapsto 1 \\ 3 \mapsto 3
+                \end{matrix} \right. , g(n) = \left \{\begin{matrix}
+                    1 \mapsto 2 \\ 2 \mapsto 3 \\ 3 \mapsto 1
+                \end{matrix} \right.$$ Notice $f\circ g(1) = 1$ and $g \circ f(1) = 3$ so $f \circ g \neq g \circ f$.
+                \item Assume there exists $f,g \in S_k$ such that $f \circ g \neq g \circ f$ for some $k$. For $S_{k+1}$, choose such $f,g \in S_k$ and create $f',g'$ which is the same as $f$ and $g$ except that the $k+1$th element gets mapped to itself. Notice there exists some $i \in \set{1,2,\ldots k}$ such that $f'\circ g'(i) = f \circ g(i) \neq g \circ f (i)= g' \circ f' (i)$ so it follows that $f' \circ g' \neq g'\circ f'$ and thus the result holds.
+            \end{itemize}
+              By the principle of mathematical induction, the result holds for all $n \geq 3$.
+            \end{proof}
+        \end{mdframed}
+    \end{enumerate}
 \end{document}
