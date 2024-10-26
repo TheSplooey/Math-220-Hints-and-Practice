@@ -1,1 +1,2 @@
-The Practice Finals 2 and Torture Finals will undergo a couple of changes (Torture Finals will be nerfed into Practice Finals 3)
+You will not be expected to know the complex numbers of Rn (Euclidean space) for your actual finals. I just assume that most of you probably know about them and hence I put them in Practice Finals 1.
+You probably will not need to memorize the definition of a bounded sequence on the actual finals.
