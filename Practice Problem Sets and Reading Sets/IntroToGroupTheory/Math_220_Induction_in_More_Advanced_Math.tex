@@ -47,7 +47,7 @@
     A function $f$ has an inverse such that $f\cdot f^{-1} = e$ and $f^{-1} \cdot f = e$ where $e$ is the identity map (a function that sends everything to itself) if and only if $f$ is bijective.
 \end{theorem}
 \begin{definition}
-    $\# S$ denotes the cardinality of a set $S$, which can be thought of as the size of the set. We say $\# S = \# T$ for sets $T,S$ if there exists a bijection between the two sets, and $\#S \leq \#T$ if there exists an injection mapping $S$ into $T$.
+    $\# S$ denotes the \textbf{cardinality} of a set $S$, which can be thought of as the size of the set. We say $\# S = \# T$ for sets $T,S$ if there exists a bijection between the two sets, and $\#S \leq \#T$ if there exists an injection mapping $S$ into $T$.
 \end{definition}
 \section{Introductory group theory}
 \textbf{This package is mostly for if anyone is interested in seeing how induction can be applied in other areas of math. The goal of this document is to investigate some more advanced mathematics, and how induction could be applied to prove useful results in maths. The examples using induction are bolded. Knowledge up to Chapter 7 or 8 will be sufficient along with the additional definitions above.} \par
@@ -63,11 +63,11 @@ Formally, a group is defined as follows:
 \end{definition}
 There are many examples of groups, they are practically everywhere. \begin{itemize}
     \item $\mathbb{Z}$ and $\mathbb{Z}_n$ which denote the integers mod $n$ form a group under addition.
-    \item The set of integers coprime to $n$ under $\mod n$ form a group under multiplication.
-    \item $GL_n(\mathbb{R})$, the group of $n\times n$ invertible real matrices, form a group under matrix multiplication.
+    \item The set of integers coprime to $n$ under $\mod n$ forms a group under multiplication.
+    \item $GL_n(\mathbb{R})$, the set of $n\times n$ invertible real matrices, forms a group under matrix multiplication.
     \item $S_n$ from Q1 in the exercises forms a group under function composition as the operation.
-    \item $D_n$, the group of symmetries on a regular $n-$gon forms a group under composition of rotations or reflections.
-    \item $Q_8 = \set{1,-1,i,-i,j,-j,k,-k}$, known as the quaternion group, form a group under multiplication.
+    \item $D_n$, the set of symmetries on a regular $n-$gon forms a group under composition of rotations or reflections.
+    \item $Q_8 = \set{1,-1,i,-i,j,-j,k,-k}$, known as the quaternion group, forms a group under multiplication.
 \end{itemize}
 Groups are very useful in many fields of mathematics especially given how omnipresent they are. Groups can even be contained in other groups.
 \begin{definition}
@@ -201,7 +201,7 @@ The above tells us that finite abelian $p-$groups must also have order $p^n$, an
     \begin{definition}
         Let $G$ be a group and $g \in G$. Then, the \textbf{conjugacy class of} $x$ is $\mathrm{Cl}(x) = \set{gxg^{-1}|g \in G}$.
     \end{definition}
-    Keep in mind, conjugacy classes do not need to be groups. Furthermore, conjugacy classes form a partition on $G$ under the relation $a \sim b$ if and only if $a = gbg^{-1}$ for some $g \in G$.
+    Keep in mind, conjugacy classes do not need to be groups. Furthermore, conjugacy classes form a partition on $G$ under the relation $a \sim b$ if and only if $a = gbg^{-1}$ for some $g \in G$, which means $G$ can be viewed as a disjoint union of conjugacy classes.
     \begin{definition}
         Let $G$ be a group and $x \in G$. Then, the \textbf{centralizer of} $x$ is $C(x)=\set{g \in G | gx = xg}$.
     \end{definition}
@@ -209,7 +209,7 @@ The above tells us that finite abelian $p-$groups must also have order $p^n$, an
     \begin{definition}
         Let $G$ be a group. Then, the \textbf{center of} $G$ is $Z(G) = \set{h | \forall g \in G, gh = hg}$.
     \end{definition}
-    In other words, the center of a group is the set of elements that commute with everything. It follows that if $g \in Z(G)$, $Cl(g) = \set{g}$ since for all $h \in G$ we have $hgh^{-1} = hh^{-1}g = g$ as $g$ commutes with everything in $G$, and the converse implication holds as well. Now suppose $G$ is a group. Then, it can be split up into a bunch of conjugacy classes and we can take a representative from each conjugacy class, call them $x_1,x_2,x_3\ldots$ and form the set $\set{x_1,x_2,x_3\ldots}$. Then, since $Z(G)$ is just the collection of elements whose conjugacy classes consist of 1 element, we can write out the equation
+    In other words, the center of a group is the set of elements that commute with everything. It follows that if $g \in Z(G)$, $\mathrm{Cl}(g) = \set{g}$ since for all $h \in G$ we have $hgh^{-1} = hh^{-1}g = g$ as $g$ commutes with everything in $G$, and the converse implication holds as well. Now suppose $G$ is a group. Then, it can be split up into a bunch of conjugacy classes and we can take a representative from each conjugacy class, call them $x_1,x_2,x_3\ldots$ and form the set $\set{x_1,x_2,x_3\ldots}$. Then, since $Z(G)$ is just the collection of elements whose conjugacy classes consist of 1 element, we can write out the equation
     $$\# G = \#Z(G) + \sum_{x \in \set{x_1,x_2,x_3\ldots}\backslash Z(G)} \# \mathrm{Cl}(x)$$
     This equation is often called the \textbf{class equation}. We will use this to prove Sylow's first theorem.
     \begin{theorem}[Sylow I]
@@ -223,8 +223,8 @@ The above tells us that finite abelian $p-$groups must also have order $p^n$, an
            \item The base case is $\# G = p$ and is trivial.
            \item For the inductive step, assume the statement holds for all groups with order less than $\# G$. Then, notice either $p|\#Z(G)$ or $p\nmid \#Z(G)$.
            \begin{itemize}
-               \item If $p|\#Z(G)$, then by Cauchy's theorem for abelian groups there exists an element $h$ with order $p$ in $\#Z(G)$ and thus $G$. $H = \langle h \rangle$ is in $Z(G)$ and so is normal in $G$. Now, $\#G/H < \#G$ so by induction there exists a subgroup $K$ such that $\#K = p^{k-1}$ in $G/H$ so taking $\pi^(-1)(K)\leq G$ where $\pi$ is the map $g \mapsto gH$ will give a subgroup of order $p^k$.
-               \item If $p\nmid \#Z(G)$, by the class equation, we know $$\# G = \#Z(G) + \sum_{x \in \set{x_1,x_2,x_3\ldots}\backslash Z(G)} \# \mathrm{Cl}(x)$$ and $p|\#G$ but $p\nmid \#Z(G)$ implies there exists $\mathrm{Cl}(x)$ such that $p\nmid \#\mathrm{Cl}(x)$ and hence $p^k\nmid \#\mathrm{Cl}(x)$. Notice $\#G = \#C(x)[G:C(x)]$ = $\#C(x)\#Cl(x)$ by the orbit-stabilizer theorem and $p^k \mid G$ implies $p^k \mid C(x)$. By induction, since $\#C(x) < \#G$, $C(x)$ has a subgroup of order $p^k$ and hence so does $G$.
+               \item If $p|\#Z(G)$, then by Cauchy's theorem for abelian groups there exists an element $h$ with order $p$ in $\#Z(G)$ and thus $G$. $H = \langle h \rangle$ is in $Z(G)$ and so is normal in $G$. Now, $\#G/H < \#G$ so by induction there exists a subgroup $K$ such that $\#K = p^{k-1}$ in $G/H$ so taking $\pi^{-1}(K)\leq G$ where $\pi$ is the map $g \mapsto gH$ will give a subgroup of order $p^k$.
+               \item If $p\nmid \#Z(G)$, by the class equation, we know $$\# G = \#Z(G) + \sum_{x \in \set{x_1,x_2,x_3\ldots}\backslash Z(G)} \# \mathrm{Cl}(x)$$ and $p|\#G$ but $p\nmid \#Z(G)$ implies there exists $\mathrm{Cl}(x)$ such that $p\nmid \#\mathrm{Cl}(x)$ and hence $p^k\nmid \#\mathrm{Cl}(x)$. Notice $\#G = \#C(x)[G:C(x)]$ = $\#C(x)\#\mathrm{Cl}(x)$ by the orbit-stabilizer theorem and $p^k \mid G$ implies $p^k \mid C(x)$. By induction, since $\#C(x) < \#G$, $C(x)$ has a subgroup of order $p^k$ and hence so does $G$.
            \end{itemize}
        \end{itemize}
         By the principle of mathematical induction, the result follows.
@@ -233,11 +233,11 @@ The above tells us that finite abelian $p-$groups must also have order $p^n$, an
 \section{Exercises}
 These are pretty standard group theory results for the most part and you can more or less find all answers on Stack Exchange or similar websites.
 \begin{enumerate}
-    \item We define a permutation on the set $X=\set{1,2,3,\ldots,n}$ as a bijection $f: X \mapsto X$ and let $S_n$ be the set of permutations on $X$. \begin{enumerate}
+    \item We define a \textbf{permutation} on the set $X=\set{1,2,3,\ldots,n}$ as a bijection $f: X \mapsto X$ and let $S_n$ be the set of permutations on $X$. \begin{enumerate}
     \item Prove that $S_n$ is a group and has $n!$ elements.
-    \item We say $\sigma \in S_n$ is a cycle if $\sigma$ is a function that maps $a_1 \mapsto a_2 \mapsto a_3 \mapsto \ldots \mapsto a_n \mapsto a_1$ and for all $b \in X$ such that $b \neq a_i$ for all $i$. We write this cycle as $(a_1 a_2 a_3 \ldots a_n)$, and we say two cycles are disjoint if they have no overlapping $a_i$. Prove that for all $\sigma \in S_n$, $\sigma$ can be written as a product of disjoint cycles.
-    \item We say $\tau$ is a transposition if $\tau$ is a cycle of the form $(ab)$ where $a \neq b$. Prove that the identity map $e$ can only be written as a product of an even number of transpositions. (Hint: The inverse of a transposition is itself)
-    \item Assume that every permutation $\sigma$ can be written as a product of transpositions. Prove that if $\sigma$ can be written as an even product of transpositions, it cannot be written as an odd product of transpositions (The same holds vice versa. Hence, it makes sense to call permutations even or odd).
+    \item We say $\sigma \in S_n$ is a \textbf{cycle} if $\sigma$ is a function that maps $a_1 \mapsto a_2 \mapsto a_3 \mapsto \ldots \mapsto a_n \mapsto a_1$ and for all $b \in X$ such that $b \neq a_i$ for all $i$. We write this cycle as $(a_1 a_2 a_3 \ldots a_n)$, and we say two cycles are \textbf{disjoint} if they have no overlapping $a_i$. Prove that for all $\sigma \in S_n$, $\sigma$ can be written as a product of disjoint cycles.
+    \item We say $\tau$ is a \textbf{transposition} if $\tau$ is a cycle of the form $(ab)$ where $a \neq b$. Prove that the identity map $e$ can only be written as a product of an even number of transpositions. (Hint: The inverse of a transposition is itself)
+    \item Assume that every permutation $\sigma$ can be written as a product of transpositions. Prove that if $\sigma$ can be written as an even product of transpositions, it cannot be written as an odd product of transpositions (The same holds vice versa. Hence, it makes sense to call permutations \textbf{even} or \textbf{odd}).
     \item Let $n \geq 3$. Prove that every even permutation in $S_n$ can be written as a product of $3-$cycle $(abc)$ where $a\neq b \neq c$. (Essentially what you are proving is that the group of even permutations called $A_n$ is generated by 3-cycles)
     \item Assume that every permutation $\sigma$ can be written as a product of transpositions. Prove that $S_n$ is generated by $(12),(13),(14),\ldots,(1n)$.
     \item  Assume that every permutation $\sigma$ can be written as a product of transpositions. Prove that $S_n$ is generated by $(12),(23),(34),\ldots,(n-1 \ n)$.
@@ -245,9 +245,9 @@ These are pretty standard group theory results for the most part and you can mor
 \end{enumerate}
 \item \begin{enumerate}
     \item Prove that every finite $p-$group has order $p^n$.
-    \item We say a group $G$ is solvable if there exists a finite series $\set{1} = G_n \triangleleft G_{n-1} \triangleleft \ldots \triangleleft G_2 \triangleleft G_1 \triangleleft G_0 = G$ where for all $i$, $G_i/G_{i+1}$ is abelian. Prove that every finite $p-$group is solvable.
-    \item We define a lower central series as $\ldots \triangleleft G_2 \triangleleft G_1 \triangleleft G_0 = G$ where for each $i$, $G_i = [G_i,G]$ which is the group generated by all elements of the form ${g_i}^{-1}g^{-1}g_ig$ where $g_i \in G_i$ and $g \in G$. Let $G,H$ be groups and $\varphi: G \mapsto H$ be a function such that $f(gg')=f(g)f(g')$ for all $g,g' \in G$. (such functions are called \textbf{homomorphisms}) where for all $i,$ $\varphi(G_i)\leq K_i$. Prove that if $\varphi$ is surjective, then $\varphi(G_i)=K_i$.
-    \item We say a group $G$ is nilpotent if it has a lower central series that ends with $G_n = \set{1}$ for some $n \in \mathbb{N}$. Prove that every finite $p-$group is nilpotent. (Hint: Use part (c))
+    \item We say a group $G$ is \textbf{solvable} if there exists a finite series $\set{1} = G_n \triangleleft G_{n-1} \triangleleft \ldots \triangleleft G_2 \triangleleft G_1 \triangleleft G_0 = G$ where for all $i$, $G_i/G_{i+1}$ is abelian. Prove that every finite $p-$group is solvable.
+    \item We define a \textbf{lower central series} as $\ldots \triangleleft G_2 \triangleleft G_1 \triangleleft G_0 = G$ where for each $i$, $G_i = [G_i,G]$ which is the group generated by all elements of the form ${g_i}^{-1}g^{-1}g_ig$ where $g_i \in G_i$ and $g \in G$. Let $G,H$ be groups and $\varphi: G \mapsto H$ be a function such that $f(gg')=f(g)f(g')$ for all $g,g' \in G$. (such functions are called \textbf{homomorphisms}) where for all $i,$ $\varphi(G_i)\leq K_i$. Prove that if $\varphi$ is surjective, then $\varphi(G_i)=K_i$.
+    \item We say a group $G$ is \textbf{nilpotent} if it has a lower central series that ends with $G_n = \set{1}$ for some $n \in \mathbb{N}$. Prove that every finite $p-$group is nilpotent. (Hint: Use part (c))
 \end{enumerate}
 \item Do the actual induction and complete the proof for Theorem 2.3.
 \end{enumerate}
