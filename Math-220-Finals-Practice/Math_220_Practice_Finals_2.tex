@@ -1,0 +1,189 @@
+\documentclass[letterpaper,12pt]{article}
+\newcommand{\hw}{2} 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage[paper=letterpaper,left=25mm,right=25mm,top=3cm,bottom=25mm]{geometry}
+\usepackage{fancyhdr} %% for details on how this work, search-engine ``fancyhdr documentation''
+\pagestyle{fancy}
+\usepackage{array}
+\usepackage{marginnote}
+\lhead{MATH 220 Practice Finals 2} % course name as top-left
+\chead{Page \thepage \ of 18} % homework number in top-centre
+\rhead{Student No: \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+
+\cfoot{Page \thepage \ of 18} % page in middle
+\usepackage{ragged2e}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+%% We also redfine the negation symbol:
+\renewcommand{\neg}{\sim}
+\newtheorem{lemma}{Lemma}[section]
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\makeatletter
+\newsavebox\myboxA
+\newsavebox\myboxB
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newlength\mylenA
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+\makeatother
+\begin{document}
+\centering
+ \textbf{MATH 220 Practice Finals 2 --- October, 2024, Duration: 2.5 hours}
+ \\
+\textit{This test has \textbf{9 questions} on \textbf{18 pages}, for a total of 90 points. }
+\vspace{2cm}
+\renewcommand{\arraystretch}{2}
+\\
+\begin{tabular}{ | m{7.5cm}| m{7.5cm}| } 
+  \hline
+  First Name: & Last Name: \\
+  \hline
+  Student Number: & Section: \\
+  \hline 
+ \multicolumn{2}{| l |}{Signature:}  \\
+  \hline
+\end{tabular}
+\\
+\vspace{1.5cm}
+\begin{tabular}{ | P{1.7cm} | P{0.4cm}| P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}} 
+  \hline
+ Question: &1 & 2&3&4&5&6&7&8&9 \\
+ \hline
+ Points: & & & & & & & & &     \\
+  \hline
+  Total:  & \multicolumn{9}{| r |}{/90} \\
+  \hline
+\end{tabular}
+\clearpage
+\begin{enumerate}
+    \item[1.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Carefully define or restate each of the following: \begin{enumerate}
+        \item An upper bound on a set $A \subseteq X$ where $X$ is ordered
+        \vspace{1.4in}
+        \item Bézout's lemma
+                \vspace{1.4in}
+        \item A partition on a set $X$
+                \vspace{1.4in}
+        \item A bounded sequence $(x_n)_{n \in \mathbb{N}} : \mathbb{N} \mapsto \mathbb{R}$
+                \vspace{1.4in}
+        \item The principle of mathematical induction
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[2.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Write the negation of each of the following and prove or disprove the original statement.
+    \begin{enumerate}
+        \item For all $n \in \mathbb{N}$, for all $x \in \mathbb{N}$, for all $y \in \mathbb{N}$, there exists $k \in \mathbb{N}$ such that $yk \equiv x \mod n$.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] For all people $e \in D_e$ where $D_e$ is the set of all people, there exists a function $f:D_e \mapsto D_e$ such that $f$ maps $e$ to the biological grandmothers of $e$.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[3. ]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $f: A \mapsto B$ and $g: B \mapsto C$ be functions. Prove or disprove each of the following: \begin{enumerate}
+        \item If $g \circ f$ is bijective, then $f$ is injective.
+        
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] If $g \circ f$ is bijective, then $f$ is surjective.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[4.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $p$ be a prime. Prove by induction that for all $n \in \mathbb{Z}$, $p \mid n^p - n$. (Hint: You will need to split into different cases for induction, and use the binomial theorem)
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[5.]  \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $\mathbb{R}[x]$ denote the set of polynomials with real coefficients and define a set $I = \set{(x^2+1)p(x) | p(x) \in \mathbb{R}[x]}$. Let $\sim$ be a relation on $\mathbb{R}[x]$ defined as $f(x) \sim g(x)$ if and only if $f(x)-g(x) \in I$.
+    \begin{enumerate}
+        \item Prove $\sim$ is an equivalence relation.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Let $f(x) \in \mathbb{R}[x]$ and $[f(x)]$ be its equivalence class under $\sim$. Prove that $[f(x)]$ must be of the form $\set{a + bx + p(x) | p(x) \in I}$ where $a,b \in \mathbb{R}$. (Hint: The polynomial division algorithm states that for all $f(x),g(x) \in \mathbb{R}[x]$ where $\mathrm{deg}g(x) = k$, $f(x)=q(x)g(x)+r(x)$ with $q(x),r(x) \in \mathbb{R}[x]$ such that $0 \leq \mathrm{deg}r(x) < k$)
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(c)] Prove that if $f(x),g(x) \in \mathbb{R}[x]$ and $f(x)g(x) \in I$, then $f(x) \in I$ or $g(x) \in I$. (Hint: The polynomial division algorithm states that for all $f(x),g(x) \in \mathbb{R}[x]$ where $\mathrm{deg}g(x) = k$, $f(x)=q(x)g(x)+r(x)$ with $q(x),r(x) \in \mathbb{R}[x]$ such that $0 \leq \mathrm{deg}r(x) < k$)
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[6.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove or disprove each of the following: \begin{enumerate}
+        \item If $A$ is a infinite and $P \subseteq \mathcal{P}(A)$ is a finite partition of $A$, then for all $X \in P$, $X$ is infinite.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] If $A$ is a infinite and $P \subseteq \mathcal{P}(A)$ is an infinite partition of $A$, then for all $X \in P$, $X$ is finite.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[7.] \begin{enumerate}
+        \item \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove that if $A_1,A_2,A_3 \ldots A_n$ and $B_1,B_2,B_3,\ldots B_n$ are non-empty sets such that for all $i \leq n \in \mathbb{N}$, $|A_i| \leq |B_i|$, then $|\prod_{i = 1}^n A_i |\leq |\prod_{i = 1}^n B_i |$ by constructing an explicit injection $f: \prod_{i = 1}^n A_i  \mapsto \prod_{i = 1}^n B_i $
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Prove or disprove that the result holds when there exists $B_i$ such that $B_i$ is empty.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[8.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $f(x) = \begin{cases}
+        2x \ &\text{if} \ x \in \mathbb{Q}\\ -2x \ &\text{if} \ x\in \mathbb{R}\backslash\mathbb{Q}
+    \end{cases}$  \begin{enumerate}
+        \item[(a)] Recall that $f(x)$ is continuous if for all $a \in \mathbb{R}$, $\lim_{x\rightarrow a}f(x)=f(a)$. Prove that $f(x)$ is discontinuous. (Hint: Use density of rationals/irrationals in the reals)
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] We say $f(x)$ is everywhere discontinuous if for all $a \in \mathbb{R}$ there exists $\varepsilon > 0$ such that for all $\delta > 0$, there exists $x\in\mathbb{R}$ such that $0<|x-a|<\delta$ and $|f(x)-f(a)| \geq \epsilon$. Prove or disprove that $f(x)$ everywhere discontinuous.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[9.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
+    Let $f:(0,1) \mapsto \mathbb{R}$ be defined as $f(x) = \frac{2x-1}{x-x^2}$. \begin{enumerate}
+        \item Prove that $f$ is injective.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Prove that $f$ is surjective.
+        \vspace{6in}
+        \item[(c)] Hence prove that $|(0,1)|=|\mathbb{R}|$.
+    \end{enumerate}
+\end{enumerate}
+\end{document}
