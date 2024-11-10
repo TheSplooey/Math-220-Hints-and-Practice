@@ -7,10 +7,10 @@
 \usepackage{array}
 \usepackage{marginnote}
 \lhead{MATH 220 Practice Finals 2} % course name as top-left
-\chead{Page \thepage \ of 18} % homework number in top-centre
+\chead{Page \thepage \ of X} % homework number in top-centre
 \rhead{Answer Key }
 
-\cfoot{Page \thepage \ of 18} % page in middle
+\cfoot{Page \thepage \ of X} % page in middle
 \usepackage{ragged2e}
 
 \renewcommand{\headrulewidth}{0.4pt}
@@ -56,7 +56,7 @@
 \centering
  \textbf{MATH 220 Practice Finals 2 Answers --- October, 2024, Duration: 2.5 hours}
  \\
-\textit{This test has \textbf{9 questions} on \textbf{18 pages}, for a total of 90 points. }
+\textit{This test has \textbf{9 questions} on \textbf{X pages}, for a total of 90 points. }
 \vspace{2cm}
 \renewcommand{\arraystretch}{2}
 \\
@@ -183,27 +183,33 @@
                  \item For $n \geq 0 \in \mathbb{N}$, we proceed with induction on $n$. \begin{itemize}
                      \item For the base case, it holds trivially when $n=0$ since $p \mid 0^p - 0 = 0$.
                      \item Assume that the statement holds for $n=k$. Then, observe that \begin{align*}
-                         (n+1)^{p} - n - 1 &= n^p + 1 + \sum_{k=1}^{n}{n \choose k} n^{n-k} -n-1\\
-                     &= n^p - n + p\ell \\
-                     &= pm + p\ell
+                         (k+1)^{p} - k - 1 &= k^p + 1 + \sum_{i=1}^{k}{k \choose i} k^{k-i} -k-1\\
+                     &= k^p - k + ps \\
+                     &= pr + ps \\
+                     &= p(r+s)
                      \end{align*}
-                     so $p \mid (n+1)^p - n$ and the inductive step holds.
+                     so $p \mid (k+1)^p - k-1$ and the inductive step holds.
                  \end{itemize}
                  Since the base case and the inductive step hold, by the principle of mathematical induction, the result holds for all $n \geq 0$.
-                 \item For $n < 0$, e proceed with induction on $n$. \begin{itemize}
-                     \item For the base case, notice when $n = -1$, $p = 2$ or $p \neq 2$. \begin{itemize}
+                 \item For $n < 0$, we proceed with induction on $m=-n$, and we show $p \mid (-m)^p+m$ for all $m \in \mathbb{N}$. \begin{itemize}
+                     \item For the base case, notice when $m=1 = -n$, $p = 2$ or $p \neq 2$. \begin{itemize}
                          \item If $p = 2$, $p \mid (-1)^2 + 1 = 2$ 
                          \item If $p \neq 2$, $p \mid (-1)^p + 1 = 0$
                      \end{itemize}
                      So the base case holds.
-                     \item  Assume that the statement holds for $n=k$. Then, \begin{align*}
-                         (n+1)^{p} - n - 1 &= n^p + 1 + \sum_{k=1}^{n}{n \choose k} n^{n-k} -n-1\\
-                     &= n^p - n + p\ell \\
-                     &= pm + p\ell
+                     \item  Assume that the statement holds for $m=k$. Then, \begin{align*}
+                         (-k-1)^{p} + k + 1 &= (-k)^p + (-1)^p + \sum_{i=1}^{k}{k \choose i} (-k)^{k-i}(-1)^k +k+1\\
+                     &= (-k)^p + (-1)^p +k+1  + ps\\
+                     &= (-1)^p +1+pr + ps
                      \end{align*}
-                     so $p \mid (n+1)^p - n$ and the inductive step holds.
+                     Now $p=2$ or $p\neq 2$
+                     \begin{itemize}
+                         \item If $p=2$, $(-1)^p +1+pr + ps = 2+2(r+s) = 2(1+r+s)$.
+                         \item If $p\neq 2$, $(-1)^p +1+pr+ps = -1 + 1 +pr+ ps =pr+ ps = p(r+s)$.
                      \end{itemize}
-                        Since the base case and the inductive step hold, by the principle of mathematical induction, the result holds for all $n < 0$.
+                     In all cases, $p \mid (-k-1)^p +k+1$ so the inductive step holds.
+                     \end{itemize}
+                        Since the base case and the inductive step hold, by the principle of mathematical induction, the result holds for all $m > 0$ and hence all $-n > 0$, which is the same as all .
                  \end{itemize}
                  As such, it holds for all $n \in \mathbb{Z}$ as required.
          \end{proof}
@@ -406,3 +412,4 @@
         \end{mdframed}   
 \end{enumerate}
 \end{document}
+
