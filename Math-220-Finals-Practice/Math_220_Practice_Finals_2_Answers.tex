@@ -1,0 +1,408 @@
+\documentclass[letterpaper,12pt]{article}
+\newcommand{\hw}{2} 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage[paper=letterpaper,left=25mm,right=25mm,top=3cm,bottom=25mm]{geometry}
+\usepackage{fancyhdr} %% for details on how this work, search-engine ``fancyhdr documentation''
+\pagestyle{fancy}
+\usepackage{array}
+\usepackage{marginnote}
+\lhead{MATH 220 Practice Finals 2} % course name as top-left
+\chead{Page \thepage \ of 18} % homework number in top-centre
+\rhead{Answer Key }
+
+\cfoot{Page \thepage \ of 18} % page in middle
+\usepackage{ragged2e}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+%% We also redfine the negation symbol:
+\renewcommand{\neg}{\sim}
+\newtheorem{lemma}{Lemma}[section]
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\makeatletter
+\newsavebox\myboxA
+\newsavebox\myboxB
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newlength\mylenA
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+\makeatother
+\usepackage[]{mdframed}
+
+
+% draw a frame around given text
+\newcommand{\framedtext}[1]{%
+\par%
+\noindent\fbox{%
+    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{#1}%
+}%
+}
+\begin{document}
+\centering
+ \textbf{MATH 220 Practice Finals 2 Answers --- October, 2024, Duration: 2.5 hours}
+ \\
+\textit{This test has \textbf{9 questions} on \textbf{18 pages}, for a total of 90 points. }
+\vspace{2cm}
+\renewcommand{\arraystretch}{2}
+\\
+\begin{tabular}{ | m{7.5cm}| m{7.5cm}| } 
+  \hline
+  First Name: & Last Name: \\
+  \hline
+  Student Number: & Section: \\
+  \hline 
+ \multicolumn{2}{| l |}{Signature:}  \\
+  \hline
+\end{tabular}
+\\
+\vspace{1.5cm}
+\begin{tabular}{ | P{1.7cm} | P{0.4cm}| P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}|P{0.4cm}} 
+  \hline
+ Question: &1 & 2&3&4&5&6&7&8&9 \\
+ \hline
+ Points: & & & & & & & & &     \\
+  \hline
+  Total:  & \multicolumn{9}{| r |}{/90} \\
+  \hline
+\end{tabular}
+\clearpage
+\begin{enumerate}
+    \item[1.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Carefully define or restate each of the following: \begin{enumerate}
+        \item An upper bound on a set $A \subseteq X$ where $X$ is ordered
+        \begin{mdframed}
+            \textbf{Solution:} Let $A \subseteq X$. Then, $y \in X$ is called an upper bound if for all $a \in A$, $a \leq y$.
+        \end{mdframed}
+        \vspace{0.5in}
+        \item Bézout's lemma
+        \begin{mdframed}
+            \textbf{Solution:}
+            Let $a,b \in \mathbb{Z}$. Then, there exists $x,y \in \mathbb{Z}$ such that $ax + by = \gcd(a,b)$.
+        \end{mdframed}
+                \vspace{0.5in}
+        \item A partition on a set $X$
+         \begin{mdframed}
+            \textbf{Solution:}
+            $P \subseteq \mathcal{P}(X)$ is a partition on $X$ if \begin{itemize}
+                \item For all $A \in P$, $A \neq \varnothing$.
+                \item For all $x \in X$, there exists $A \in P$ such that $x \in P$.
+                \item For all $A_1, A_2 \in P$, $A_1 = A_2$ or $A_1 \cap A_2 = \varnothing$.
+            \end{itemize}
+            \vspace{0.1in}
+        \end{mdframed}
+        \item A bounded sequence $(x_n)_{n \in \mathbb{N}} : \mathbb{N} \mapsto \mathbb{R}$
+         \begin{mdframed}
+            \textbf{Solution:}
+            We say $(x_n)_{n \in \mathbb{N}} : \mathbb{N} \mapsto \mathbb{R}$ is bounded if there exists $M \in \mathbb{R}$ such that for all $n \in \mathbb{N}$, $|x_n| \leq M$.
+        \end{mdframed}
+                \vspace{0.5in}
+        \item The principle of mathematical induction
+         \begin{mdframed}
+            \textbf{Solution:}
+             Let $\ell \in \mathbb{Z}$ and let $S = \set{k \in \mathbb{Z} | n \geq \ell}$. If $P(\ell)$ is true and $P(k)$ being true implies $P(k+1)$ being true for some $k \in S$, then $P(n)$ is true for all $n \in S$.
+        \end{mdframed}
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[2.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Write the negation of each of the following and prove or disprove the original statement.
+    \begin{enumerate}
+        \item For all $n \in \mathbb{N}$, for all $x \in \mathbb{Z}$, for all $y \in \mathbb{Z}$, there exists $k \in \mathbb{Z}$ such that $yk \equiv x \mod n$.
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:} The negation is "There exists $n \in \mathbb{N}$ such that there exist $x \in \mathbb{N}$ such that there exists $y \in \mathbb{N}$ such that for all $k \in \mathbb{N}, yk \not \equiv x \mod n$". The original statement is false.
+            . \renewcommand{\proofname}{Disproof} \begin{proof}
+                Let $n = 4$, $x = 1$, $y = 2$ and let $k\in \mathbb{N}$. Notice for all $k \in \mathbb{N}$, $2k \equiv 2 \mod 4$ or $2k \equiv 0 \mod 4$ so the original statement is false.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] For all people $e \in D_e$ where $D_e$ is the set of all people, there exists a function $f:D_e \mapsto D_e$ such that $f$ maps $e$ to the biological grandmothers of $e$.
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:}
+            The negation is "There exists a person $e \in D_e$ such that for all functions $f:D_e \mapsto D_e$, $f$ does not map $e$ to the biological grandmothers of $e$. The original statement is false. \renewcommand{\proofname}{Disproof}  \begin{proof}
+                Notice for all $e \in D_e$, $e$ has two biological grandmothers. It follows that if $f$ maps $e$ to their biological grandmothers, then $f(e) = e_1 = e_2$ for some $e_1 \neq e_2$, a contradiction. Hence, there does not exist such $f$.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[3. ]\reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $f: A \mapsto B$ and $g: B \mapsto C$ be functions. Prove or disprove each of the following: \begin{enumerate}
+        \item If $g \circ f$ is bijective, then $f$ is injective.
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution 1:}
+             \begin{proof}
+            Let $a_1,a_2 \in A$ and assume $f(a_1) = f(a_2)$ and thus $g\circ f(a_1) =g\circ f(a_2)$. Since $g \circ f$ is injective, it follows that $a_1 = a_2$.
+        \end{proof}
+        \end{mdframed}
+        \begin{mdframed}
+            \textbf{Solution 2:}
+             \begin{proof}
+            We prove the contrapositive. Assume $f$ is not injective, so there exists $a_1,a_2 \in A$ where $a_1 \neq a_2$ such that $f(a_1) = f(a_2)$. Then, $g\circ f(a_1) = g\circ f(a_2)$ so $g\circ f$ is not injective and hence not bijective.
+        \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] If $g \circ f$ is bijective, then $f$ is surjective.
+    \end{enumerate}
+     \begin{mdframed}
+            \textbf{Solution:}
+            \renewcommand{\proofname}{Disproof} \begin{proof}
+                Let $A = \set{0}$, $B = \set{0,1}$ and $C= \set{0}$, let $f(x) = 0$ and $g(x) = 0$. Notice $g\circ f$ maps $0$, the only element in $A$, to $0$, the only element in $C$, so $g\circ f$ is bijective. However, $f^{-1}(\set{1}) = \varnothing$ so $f$ is not surjective.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[4.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $p$ be a prime. Prove by induction that for all $n \in \mathbb{Z}$, $p \mid n^p - n$. (Hint: You will need to split into different cases for induction, and use the binomial theorem)
+    \begin{mdframed}
+         \textbf{Solution:}
+         \begin{proof}
+             We proceed with a proof by cases.
+             \begin{itemize}
+                 \item For $n \geq 0 \in \mathbb{N}$, we proceed with induction on $n$. \begin{itemize}
+                     \item For the base case, it holds trivially when $n=0$ since $p \mid 0^p - 0 = 0$.
+                     \item Assume that the statement holds for $n=k$. Then, observe that \begin{align*}
+                         (n+1)^{p} - n - 1 &= n^p + 1 + \sum_{k=1}^{n}{n \choose k} n^{n-k} -n-1\\
+                     &= n^p - n + p\ell \\
+                     &= pm + p\ell
+                     \end{align*}
+                     so $p \mid (n+1)^p - n$ and the inductive step holds.
+                 \end{itemize}
+                 Since the base case and the inductive step hold, by the principle of mathematical induction, the result holds for all $n \geq 0$.
+                 \item For $n < 0$, e proceed with induction on $n$. \begin{itemize}
+                     \item For the base case, notice when $n = -1$, $p = 2$ or $p \neq 2$. \begin{itemize}
+                         \item If $p = 2$, $p \mid (-1)^2 + 1 = 2$ 
+                         \item If $p \neq 2$, $p \mid (-1)^p + 1 = 0$
+                     \end{itemize}
+                     So the base case holds.
+                     \item  Assume that the statement holds for $n=k$. Then, \begin{align*}
+                         (n+1)^{p} - n - 1 &= n^p + 1 + \sum_{k=1}^{n}{n \choose k} n^{n-k} -n-1\\
+                     &= n^p - n + p\ell \\
+                     &= pm + p\ell
+                     \end{align*}
+                     so $p \mid (n+1)^p - n$ and the inductive step holds.
+                     \end{itemize}
+                        Since the base case and the inductive step hold, by the principle of mathematical induction, the result holds for all $n < 0$.
+                 \end{itemize}
+                 As such, it holds for all $n \in \mathbb{Z}$ as required.
+         \end{proof}
+    \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[5.]  \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $\mathbb{R}[x]$ denote the set of polynomials with real coefficients and define a set $I = \set{(x^2+1)p(x) | p(x) \in \mathbb{R}[x]}$. Let $\sim$ be a relation on $\mathbb{R}[x]$ defined as $f(x) \sim g(x)$ if and only if $f(x)-g(x) \in I$.
+    \begin{enumerate}
+        \item Prove $\sim$ is an equivalence relation.
+        \end{enumerate}
+        \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                We prove reflexivity, symmetry, and transitivity in turn. \begin{itemize}
+                    \item For reflexivity, let $f(x) \in \mathbb{R}[x]$. Then, $f(x) - f(x) = 0 = (x^2+1)\cdot 0 \in I$ so $f(x) \sim f(x)$.
+                    \item For symmetry, let $f(x),g(x) \in \mathbb{R}[x]$ and assume $f(x) \sim g(x)$. Then, $f(x) - g(x) = (x^2+1)p(x)$ for some $p(x) \in \mathbb{R}[x]$ so $g(x) - f(x) = (x^2+1)(-p(x)) \in I$ so $g(x) \sim f(x)$.
+                    \item For transitivity, let $f(x),g(x),h(x) \in \mathbb{R}[x]$ and assume $f(x) \sim g(x)$ and $g(x) \sim h(x)$. Then, $f(x) - h(x) = f(x)-g(x) + g(x) - h(x) = (x^2+1)p(x) + (x^2+1)q(x) = (x^2+1)(p(x)+q(x)) \in I$ for some $p(x),q(x) \in \mathbb{R}[x]$ so $f(x) \sim h(x)$.
+                \end{itemize}
+                Hence, $\sim$ is an equivalence relation as required.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Let $f(x) \in \mathbb{R}[x]$ and $[f(x)]$ be its equivalence class under $\sim$. Prove that $[f(x)]$ must be of the form $\set{a + bx + p(x) | p(x) \in I}$ where $a,b \in \mathbb{R}$. (Hint: The polynomial division algorithm states that for all $f(x),g(x) \in \mathbb{R}[x]$ where $\mathrm{deg}g(x) = k$, $f(x)=q(x)g(x)+r(x)$ with $q(x),r(x) \in \mathbb{R}[x]$ such that $0 \leq \mathrm{deg}r(x) < k$)
+    \end{enumerate}
+    \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                Let $f(x) \in \mathbb{R}[x]$. By the polynomial division algorithm, we know $f(x) = q(x)(x^2+1) + r(x)$ where $q(x), r(x)\in \mathbb{R}[x]$ and $r(x)$ has degree 0 or 1. By definition, we know $f(x) \sim g(x)$ if and only if $f(x) - g(x) \in I$ which implies $f(x)-g(x)$ has the same polynomial remainder $r(x)$, namely, $r(x) = a+bx$ for some $a,b \in \mathbb{R}$ since $r(x)$ has degree 0 or 1. Also notice if $p(x) \in I$, we have $f(x) \sim f(x) + p(x)$ so $r(x) + p(x) \in [f(x)]$ for all $p(x) \in I$ and thus $r(x) + p(x) \in I$ for all $p(x) \in I$. Hence, $[f(x)] = \set{a + bx + p(x) | p(x) \in I}$ as required.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(c)]Prove that if $f(x),g(x) \in \mathbb{R}[x]$ and $f(x)g(x) \in I$, then $f(x) \in I$ or $g(x) \in I$. (Hint: The polynomial division algorithm states that for all $f(x),g(x) \in \mathbb{R}[x]$ where $\mathrm{deg}g(x) = k$, $f(x)=q(x)g(x)+r(x)$ with $q(x),r(x) \in \mathbb{R}[x]$ such that $0 \leq \mathrm{deg}r(x) < k$)
+    \end{enumerate}
+    \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                We prove the contrapositive. Assume $f(x) \notin I$ and $g(x) \notin I$, so by the polynomial division algorithm $f(x) = q_1(x)p(x) + r_1(x)$ and $g(x) = q_2(x)p(x) + r_2(x)$ where $r_1(x)$ and $r_2(x)$ are of degree 1. Then, \begin{align*}
+                    f(x)g(x) &= (q_1(x)p(x) + r_1(x))(q_2(x)p(x) + r_2(x)) \\
+                    &= q_1(x)p(x)q_2(x)p(x) + r_1(x)q_2(x)p(x) + q_1(x)p(x)r_2(x) + r_1(x)r_2(x) \\
+                    &= k(x)p(x) + (a_1 + b_1x)(a_2 + b_2x) \\
+                    &= k(x)p(x) + a_1a_2 + a_2b_1x  + a_1b_2 x + b_1 b_2 x^2 
+                \end{align*}
+                where one of $a_1,b_1 \in \mathbb{R}$ is non-zero and one of $a_2,b_2 \in \mathbb{R}$ is non-zero. \begin{itemize}
+                    \item If both $b_1,b_2$ are zero, both $a_1,a_2$ are non-zero so we have $f(x)g(x) = k(x)p(x) + a_1a_2$. $f(x)g(x)$ cannot be factored by $x^2 + 1$ so $f(x)g(x) \notin I$ as required.
+                    \item If $b_1,b_2$ are both non-zero, then $a_1,a_2$ are zero so $f(x)g(x) = k(x)p(x) + b_1 b_2 x^2$ which cannot be factored by $p(x)$ so $f(x)g(x) \notin I$.
+                    \item If $b_1,a_2$ are non-zero but $a_1,b_2$ are zero, then $f(x)g(x) = k(x)p(x) + a_2b_1 x$ so $x^2+1$ cannot factor $f(x)g(x)$ and $f(x)g(x) \notin I$. Without loss of generality, the same holds for $b_1,a_2$ are zero but $a_1,b_2$ are non-zero.
+                \end{itemize}
+                This proves all cases so $f(x)g(x) \notin I$ and so this proves the contrapositive.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[6.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove or disprove each of the following: \begin{enumerate}
+        \item If $A$ is a infinite and $P \subseteq \mathcal{P}(A)$ is a finite partition of $A$, then for all $X \in P$, $X$ is infinite.
+    \end{enumerate}
+    \begin{mdframed}
+            \textbf{Solution:}
+            \renewcommand{\proofname}{Disproof}
+            \begin{proof}
+                Let $A = \mathbb{N}\cup\set{0}$ and $P = \set{\set{0},\mathbb{N}}$. Observe that $A$ is infinite and $P$ is a finite partition, but $X = \set{0} \in P$ is finite, so the statement is false.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] If $A$ is a infinite and $P \subseteq \mathcal{P}(A)$ is an infinite partition of $A$, then for all $X \in P$, $X$ is finite.
+    \end{enumerate}
+    \begin{mdframed}
+            \textbf{Solution:}
+            \renewcommand{\proofname}{Disproof}
+            \begin{proof}
+                Let $A = \mathbb{N}$ and $P$ be the partition where all composite numbers form their own equivalence classes and the set of primes is one equivalence class. Since there are infinite composite numbers, $P$ is an infinite partition. However, there are also infinite primes so there exists $X \in P$ such that $X$ is infinite.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[7.] \begin{enumerate}
+        \item \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Prove that if $A_1,A_2,A_3 \ldots A_n$ and $B_1,B_2,B_3,\ldots B_n$ are non-empty sets such that for all $i \leq n \in \mathbb{N}$, $|A_i| \leq |B_i|$, then $|\prod_{i = 1}^n A_i |\leq |\prod_{i = 1}^n B_i |$ by constructing an explicit injection $f: \prod_{i = 1}^n A_i  \mapsto \prod_{i = 1}^n B_i $
+    \end{enumerate}
+    \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+            Since for all non-empty sets $A_1,A_2,A_3 \ldots A_n$ and $B_1,B_2,B_3,\ldots B_n$, we have $|A_i| \leq |B_i|$, we know that for all $A_i$ there exists an injection $f_i: A_i \mapsto B_i$. Then, I claim  $f(a_1,a_2,\ldots,a_n) = (f_1(a_1),f_2(a_2),\ldots,f_n(a_n))$ would be an injection. This is clear since if \begin{align*}
+                f(a_1,a_2,\ldots,a_n) &= (f_1(a_1),f_2(a_2),\ldots,f_n(a_n)) \\ &= (f_1(a'_1),f_2(a'_2),\ldots,f_n(a'_n))\\ &= f(a'_1,a'_2,\ldots,a'_n)
+            \end{align*}Then by the injectivity of $f_i$, we have $a_i = a'_i$ for all $0 \leq i \leq n$, so $(a_1,a_2,\ldots,a_n) = (a'_1,a'_2,\ldots,a'_n)$. Hence, $f$ is an injection.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Prove or disprove that the result holds when there exists $B_i$ such that $B_i$ is empty.
+    \end{enumerate}
+    \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+                Assume for all $A_1,A_2,A_3 \ldots A_n$ and $B_1,B_2,B_3,\ldots B_n$, we have $|A_i| \leq |B_i|$, and there exists $B_i$ such that $B_i$ is empty. Then, since $|A_i| \leq |B_i|$, $A_i = \varnothing$. It follows that $\prod_{i = 1}^n A_i =\varnothing =\prod_{i = 1}^n B_i $ so $|\prod_{i = 1}^n A_i |\leq |\prod_{i = 1}^n B_i |$ as required,
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[8.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] Let $f(x) = \begin{cases}
+        2x \ &\text{if} \ x \in \mathbb{Q}\\ -2x \ &\text{if} \ x\in \mathbb{R}\backslash\mathbb{Q}
+    \end{cases}$  \begin{enumerate}
+        \item[(a)] Recall that $f(x)$ is continuous if for all $a \in \mathbb{R}$, $\lim_{x\rightarrow a}f(x)=f(a)$. Prove that $f(x)$ is discontinuous. (Hint: Use density of rationals/irrationals in the reals)
+    \end{enumerate}
+    \begin{mdframed}
+        \textbf{Solution:} \begin{proof}
+            Let $a = 1$ and choose $\varepsilon = 1$. Then, let $\delta > 0$ and choose $x$ to be any irrational number between $1$ and $\delta + 1$ so $0 < |x-1| < \delta$. Then, \begin{align*}
+                |f(x) - f(1) | &= |f(x) - 2| \\
+                &= |-2x-2| \\
+                &= |-1||2x+2| \\
+                &= 2x+2 \geq 1 = \varepsilon
+            \end{align*}
+            So $f$ is discontinuous as required.
+        \end{proof}
+    \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] We say $f(x)$ is everywhere discontinuous if for all $a \in \mathbb{R}$ there exists $\varepsilon > 0$ such that for all $\delta > 0$, there exists $x\in\mathbb{R}$ such that $0<|x-a|<\delta$ and $|f(x)-f(a)| \geq \epsilon$. Prove or disprove that $f(x)$ everywhere discontinuous.
+    \end{enumerate}
+    \begin{mdframed}
+        \textbf{Solution:}  $f(x)$ is not everywhere discontinuous. \renewcommand{\proofname}{Disproof} \begin{proof}
+            I claim $f(x)$ is continuous at $a=0$. Let $\varepsilon > 0$, choose $\delta =\frac{\varepsilon}{4}$ and assume $0<|x| < \delta$. Then, $  |f(x)-f(0)| = \left |\frac{\pm 2\varepsilon}{4} \right |
+            = \frac{\varepsilon}{2} < \varepsilon$ so $f(x)$ is continuous at $a=0$ and hence not everywhere discontinuous.
+        \end{proof}
+    \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[9.] \reversemarginpar\marginnote{ \fbox{10 Marks} }[-0.24in] 
+    Let $f:(0,1) \mapsto \mathbb{R}$ be defined as $f(x) = \frac{2x-1}{x-x^2}$. \begin{enumerate}
+        \item Prove that $f$ is injective.
+    \end{enumerate}
+    \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+              Let $f$ be as stated and assume $f(x_1) = f(x_2)$. Then, \begin{align*}
+                  \frac{2x_1-1}{x_1-{x_1}^2} &= \frac{2x_2-1}{x_2-{x_2}^2} \\
+                  (2x_1-1)(x_2-{x_2}^2) &= (2x_2-1)(x_1-{x_1}^2) \\
+                  2x_1(x_2-{x_2}^2) - (x_2-{x_2}^2) &= 2x_2(x_1-{x_1}^2) - (x_1-{x_1}^2) \\
+                  2x_2{x_1}^2 - 2x_1{x_2}^2 + x_1-{x_1}^2 - x_2+{x_2}^2 &= 0 \\
+                  2x_2{x_1}^2 -{x_1}^2  + x_1 - 2x_1{x_2}^2 +{x_2}^2  - x_2 &= 0 \\
+                  (x_1 - x_2)(2x_1x_2 - x_1 + 1) &= 0
+              \end{align*}
+              So $x_1 = x_2$ or $2x_1x_2 - x_1 + 1 = 0$. Assume for the sake of contradiction that $x_1 \neq x_2$. Then, $2x_1x_2 - x_1 + 1 = 0$ s0 \begin{align*}
+                  2x_1x_2 - x_1 &= -1 \\
+                  x_1(2x_2 - 1) &= -1 \\
+                  2x_2 - 1 &= \frac{-1}{x_1}
+              \end{align*}
+              Now $x_1 >0$, so $2x_2 - 1 < 0$. Notice LHS $< -1$ since $0 < x_1 < 1$, but RHS $> -1$, so LHS $\neq$ RHS, a contradiction. Hence, $x_1 = x_2$ and $f$ is injective as required.
+            \end{proof}
+        \end{mdframed}
+\end{enumerate}
+\pagebreak
+\begin{enumerate}
+    \item[] \begin{enumerate}
+        \item[(b)] Prove that $f$ is surjective.
+    \end{enumerate}
+          \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+             Let $y \in \mathbb{R}$. Then, we solve for $y = \frac{2x-1}{x-x^2}$ where $x \in (0,1)$ so we solve $yx^2+(y-2)x-1=0$. Either $y = 0$ or $y\neq 0$. \begin{itemize}
+                 \item If $y=0$, notice if $x= \frac{1}{2}$ then $f(x) = 0$.
+                 \item If $y\neq 0$, observe that by the quadratic formula, \begin{align*}
+                     x &= \frac{y-2 \pm \sqrt{(y-2)^2 + 4y}}{2y} \\
+                     &= \frac{y-2 \pm \sqrt{y^2 + 4}}{2y}
+                 \end{align*}
+                 Now to check $x \in (0,1)$, it suffices to check $0 < y-2 + \sqrt{y^2 + 4} < 2y$. Now observe that $\sqrt{(2-y)^2} =\sqrt{y^2 - 4y + 4} < \sqrt{y^2+4} < \sqrt{y^2 + 4y + 4} = \sqrt{(y+2)^2}$ so \begin{align*}
+                     y-2 + \sqrt{(2-y)^2}&< y-2 + \sqrt{y^2 + 4} < y-2 + \sqrt{(y+2)^2} \\
+                     0 &< y-2  + \sqrt{y^2 + 4} < y-2 + y + 2 = 2y
+                 \end{align*} 
+                 So $x = \frac{y-2 + \sqrt{y^2 + 4}}{2y}$ maps to $y$ as required.
+             \end{itemize}
+             Hence, $f$ is surjective.
+             \end{proof}
+        \end{mdframed}
+        \vspace{1in}
+    \begin{enumerate}
+        \item[(c)] Hence prove that $|(0,1)|=|\mathbb{R}|$.
+    \end{enumerate}
+         \begin{mdframed}
+            \textbf{Solution:}
+            \begin{proof}
+             From above, $f$ is injective and surjective so $f$ is a bijection between $(0,1)$ and $\mathbb{R}$ so $|(0,1)|=|\mathbb{R}|$.
+             \end{proof}
+        \end{mdframed}   
+\end{enumerate}
+\end{document}
