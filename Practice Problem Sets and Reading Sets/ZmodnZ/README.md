@@ -1,2 +1,2 @@
 It started off as an extension of a HW problem based on some observations I noticed, and it somehow just all turned into group theory. Probably skip Q9-Q11, IDK why I put those questions there. Q8 can be quite challenging.
-Q5a and Q6 all build up to Q7, which is the question based on the HW problem.
+Q5a, Q5b, and Q6 all build up to Q7, which is the question based on the HW problem.
