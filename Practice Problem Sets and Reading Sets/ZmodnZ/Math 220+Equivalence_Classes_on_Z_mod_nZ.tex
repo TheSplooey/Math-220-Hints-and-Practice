@@ -1,0 +1,62 @@
+\documentclass[letterpaper,12pt]{article}
+\newcommand{\myname}{Practice package} 
+\newcommand{\mynumber}{Practice package} 
+\newcommand{\hw}{1} 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+
+\usepackage[paper=letterpaper,left=25mm,right=25mm,top=3cm,bottom=25mm]{geometry}
+
+
+\usepackage{fancyhdr} %% for details on how this work, search-engine ``fancyhdr documentation''
+\pagestyle{fancy}
+
+\lhead{Mathematics 220} % course name as top-left
+\chead{Equivalence Classes on $\mathbb{Z}/n\mathbb{Z}$} % homework number in top-centre
+\rhead{ \myname \\ \mynumber }
+
+\lfoot{\myname} % name on bottom-left
+\cfoot{Page \thepage} % page in middle
+\rfoot{\mynumber} % student number on bottom-right
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+%% We also redfine the negation symbol:
+\renewcommand{\neg}{\sim}
+\newtheorem{lemma}{Lemma}[section]
+\begin{document}
+\subsection*{Practice questions:}
+\begin{enumerate}
+\item Let $\mathbb{Z}/n\mathbb{Z}$ be defined as the equivalence classes on $\mathbb{Z}$ where $x \sim y$ if and only if $n \mid x-y$. Verify that $\sim$ is an equivalence relation.
+\item We say $G$ is a group if $G$ is closed under an operation $\cdot : G \times G \mapsto G$ where \begin{itemize}
+    \item For all $g_1,g_2,g_3 \in G$, $(g_1\cdot g_2)\cdot g_3 = g_1\cdot(g_2 \cdot g_3)$
+    \item There exists $e \in G$ (called the identity) such that for all $g \in G$, $g \cdot e = = g$
+    \item For all $g \in G$, there exists $g^{-1} \in G$ (called $g$ inverse) such that $g \cdot g^{-1} =  e$
+\end{itemize}
+Verify that $\mathbb{Z}/n\mathbb{Z}$ forms a group under addition mod $n$.
+\item Consider $\mathbb{Z}/n\mathbb{Z} - [0]_n$. \begin{enumerate}
+    \item When does this set form a group under multiplication mod $n$?
+    \item What is the biggest subset $U_n \subseteq \mathbb{Z}/n\mathbb{Z}$ such that $U_n$ is a group under multiplication with $[1]_n$ as the identity?
+\end{enumerate} 
+\item We say $G$ is a cyclic group if $G = \set{g^k : k \in \mathbb{Z}}$ for some $g \in G$. Then, we call $g$ a generator of $G$. \begin{enumerate}
+    \item We say $G$ is isomorphic to $H$, written $G\cong H$, where $G,H$ are groups under the operations $\cdot,\diamond$ respectively, if there exists a bijection $\phi: G \mapsto H$ such that for all $g_1,g_2 \in G$, $\phi(g_1\cdot g_2) = \phi(g_1)\diamond \phi(g_2)$. Show that if $G$ is cyclic, then $G$ is isomorphic to $\mathbb{Z}$ under addition or $\mathbb{Z}/n\mathbb{Z}$ under addition mod $n$.
+    \item Verify that $\mathbb{Z}/n\mathbb{Z}$ under addition mod $n$ is a cyclic group.
+\end{enumerate}
+\item We say $H$ is a subgroup of $G$ if $H$ is a group contained in $G$ with the same operation as $G$. \begin{enumerate}
+    \item Show that every subgroup of a cyclic group is also cyclic.
+    \item We say the order of an element $g$, written $\#g$, is the smallest natural number $n$ such that $g^n = e$ where $g^n$ denotes $g$ multiplied by itself $n$ times. 
+    \item We say the order of a group $G$, denoted $\# G$, is the cardinality of $G$. Show that if $\# g = k$ then $\# \langle g^d \rangle = \frac{d}{\gcd(d,k)}$.
+    \item Show that if $g_1,g_2 \in G$ have the same order, then $\langle g_1 \rangle = \langle g_2 \rangle$.
+    \item Show that the generators of $\mathbb{Z}/n\mathbb{Z}$ under addition mod $n$ are $[d]_n$ such that $d$ is coprime to $n$ and that there are $\varphi (n)$ generators of $\mathbb{Z}/n\mathbb{Z}$ under addition mod $n$ where $\varphi$ denotes the Euler totient function
+\end{enumerate}
+\item Let $R$ be a relation on $\mathbb{Z}/n\mathbb{Z}$ where $[x]_n R [y]_n$ if and only if there exists an invertible $[u]_n$ (under multiplication mod $n$) such that $[x]_n\cdot[u]_n = [y]_n$ where $\cdot$ is the usual multiplication mod $n$.
+\begin{enumerate}
+    \item Show that for every divisor $d$ of $n$, there exists a unique subgroup of order $d$ contained in $\mathbb{Z}/n\mathbb{Z}$.
+    \item Show that $xRy$ if and only if $x$ and $y$ have the same order in $\mathbb{Z}/n\mathbb{Z}$ under addition mod $n$.
+    \item Hence show that distinct equivalence classes of $R$ are precisely the set of generators for distinct subgroups of $\mathbb{Z}/n\mathbb{Z}$
+    \item Using this, prove that $n=\sum_{d:d\mid n}\varphi(d)$.
+\end{enumerate}
+\item Let $G$ be a finite abelian group in which the number of solutions in $G$ of the equation $x^n = e$ is at most $n$ for every positive integer $n$. For every $d \in \mathbb{N}$, define a set $A_d = \set{x\in G: x^d = e, \# x = d}$. Prove that $G$ is cyclic. (Hint: Use a counting argument involving the result from 6d and show that $A_n \neq \varnothing$ for all $n\in \mathbb{N}$).
+\end{enumerate}
+\end{document}
