@@ -29,26 +29,36 @@
 \subsection*{Practice questions:}
 \begin{enumerate}
 \item Let $\mathbb{Z}/n\mathbb{Z}$ be defined as the equivalence classes on $\mathbb{Z}$ where $x \sim y$ if and only if $n \mid x-y$. Verify that $\sim$ is an equivalence relation.
-\item We say $G$ is a group if $G$ is closed under an operation $\cdot : G \times G \mapsto G$ where \begin{itemize}
-    \item For all $g_1,g_2,g_3 \in G$, $(g_1\cdot g_2)\cdot g_3 = g_1\cdot(g_2 \cdot g_3)$
-    \item There exists $e \in G$ (called the identity) such that for all $g \in G$, $g \cdot e = = g$
+\item We say $G$ is a group if $G$ is closed under an operation $\cdot$, which is a map $G \times G \mapsto G$ where \begin{itemize}
+    \item For all $g_1,g_2,g_3 \in G$, $(g_1\cdot g_2)\cdot g_3 = g_1\cdot(g_2 \cdot g_3)$ ($\cdot$ associative)
+    \item There exists $e \in G$ (called the identity) such that for all $g \in G$, $g \cdot e = g$
     \item For all $g \in G$, there exists $g^{-1} \in G$ (called $g$ inverse) such that $g \cdot g^{-1} =  e$
 \end{itemize}
-Verify that $\mathbb{Z}/n\mathbb{Z}$ forms a group under addition mod $n$.
+And we call a group abelian if for all $g_1,g_2 \in G$, $g_1 \cdot g_2 = g_2 \cdot g_1$. Verify that $\mathbb{Z}/n\mathbb{Z}$ forms an abelian group under addition mod $n$.
 \item Consider $\mathbb{Z}/n\mathbb{Z} - [0]_n$. \begin{enumerate}
     \item When does this set form a group under multiplication mod $n$?
-    \item What is the biggest subset $U_n \subseteq \mathbb{Z}/n\mathbb{Z}$ such that $U_n$ is a group under multiplication with $[1]_n$ as the identity?
+    \item What is the biggest subset $U_n \subseteq \mathbb{Z}/n\mathbb{Z}$ such that $U_n$ is a group under multiplication with $[1]_n$ as the identity? (This is called the multiplicative group of integers mod $n$)
 \end{enumerate} 
+\item \begin{enumerate}
+    \item Let $G$ be a finite set closed under an associative operation with a left identity $e_L$ such that for all $g, g\cdot e_L$ and for all $g$, there exists a left inverse ${g_L}^{-1} \cdot g = e_L$. Verify that $G$ forms a group with $e_L = e$ and ${g_L}^{-1}=g^{-1}$
+    \item Show that it is not necessarily true that if $G$ has a left identity and every element has a right inverse $g \cdot {g_R}^{-1}  = e_L$ that $G$ forms a group.
+    \item Let $G$ be a finite set closed under an associative operation such that for all $a,b,c \in G$, $a\cdot b = a \cdot c \implies b = c$ and $b\cdot a = c\cdot a \implies b=c$. Show that $G$ is a group.
+    \item Hence show that the multiplicative group of integers mod $n$, call it $U_n$, is a group.
+\end{enumerate}
 \item We say $G$ is a cyclic group if $G = \set{g^k : k \in \mathbb{Z}}$ for some $g \in G$. Then, we call $g$ a generator of $G$. \begin{enumerate}
-    \item We say $G$ is isomorphic to $H$, written $G\cong H$, where $G,H$ are groups under the operations $\cdot,\diamond$ respectively, if there exists a bijection $\phi: G \mapsto H$ such that for all $g_1,g_2 \in G$, $\phi(g_1\cdot g_2) = \phi(g_1)\diamond \phi(g_2)$. Show that if $G$ is cyclic, then $G$ is isomorphic to $\mathbb{Z}$ under addition or $\mathbb{Z}/n\mathbb{Z}$ under addition mod $n$.
     \item Verify that $\mathbb{Z}/n\mathbb{Z}$ under addition mod $n$ is a cyclic group.
+    \item We say $G$ is isomorphic to $H$, written $G\cong H$, where $G,H$ are groups under the operations $\cdot,\diamond$ respectively, if there exists a bijection $\phi: G \mapsto H$ such that for all $g_1,g_2 \in G$, $\phi(g_1\cdot g_2) = \phi(g_1)\diamond \phi(g_2)$. Show that if $G$ is cyclic, then $G$ is isomorphic to $\mathbb{Z}$ under addition or $\mathbb{Z}/n\mathbb{Z}$ under addition mod $n$.
+    \item Let $G,H$ be groups with the operations $\cdot,\diamond$ respectively, and we define an (external) direct product $G\times H$ with the operation $*$ where $(g,h')*(g,h) = (g\cdot g',h\diamond h')$. Use the Chinese remainder theorem to show that if $m,n$ are coprime, then $\mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}$.
 \end{enumerate}
 \item We say $H$ is a subgroup of $G$ if $H$ is a group contained in $G$ with the same operation as $G$. \begin{enumerate}
     \item Show that every subgroup of a cyclic group is also cyclic.
-    \item We say the order of an element $g$, written $\#g$, is the smallest natural number $n$ such that $g^n = e$ where $g^n$ denotes $g$ multiplied by itself $n$ times. 
-    \item We say the order of a group $G$, denoted $\# G$, is the cardinality of $G$. Show that if $\# g = k$ then $\# \langle g^d \rangle = \frac{d}{\gcd(d,k)}$.
+    \item We say the order of an element $g$, written $\#g$, is the smallest natural number $n$ such that $g^n = e$ where $g^n$ denotes $g$ multiplied by itself $n$ times. Show that for $\prod_i^r \mathbb{Z}/n_i\mathbb{Z} = \mathbb{Z}/n_1\mathbb{Z}\times \mathbb{Z}/n_2\mathbb{Z}\times \ldots \times \mathbb{Z}/n_r\mathbb{Z}$, we have that $\# (g_1,g_2,\ldots,g_r) = \mathrm{lcm}(\#g_1,\#g_2,\ldots,\#g_r)$.
+    \item We say the order of a group $G$, denoted $\# G$, is the cardinality of $G$. Let $H$ be a subgroup of $G$ where $G$ is a finite group. Prove that $\#H \mid \#G$.
+    \item Every subgroup $H$ induces a partition on $G$ under the relation $g \sim g'$ if and only if there exists $h \in H$ such that $g = g'h$. Show that every equivalence class, call it $gH$ (also known as a coset of $H$), has the same number of elements as $H$, and hence conclude that $\#G = \#H [G:H]$ where $[G:H]$ is called the index of $H$ and represents the number of distinct cosets of $H$.
+    \item Show that if $\# g = k$ then $\# \langle g^d \rangle = \frac{d}{\gcd(d,k)}$.
+    \item Show that every group of prime order is cyclic.
     \item Show that if $g_1,g_2 \in G$ have the same order, then $\langle g_1 \rangle = \langle g_2 \rangle$.
-    \item Show that the generators of $\mathbb{Z}/n\mathbb{Z}$ under addition mod $n$ are $[d]_n$ such that $d$ is coprime to $n$ and that there are $\varphi (n)$ generators of $\mathbb{Z}/n\mathbb{Z}$ under addition mod $n$ where $\varphi$ denotes the Euler totient function
+    \item Show that the generators of $\mathbb{Z}/n\mathbb{Z}$ under addition mod $n$ are $[d]_n$ such that $d$ is coprime to $n$ and that there are $\varphi (n)$ generators of $\mathbb{Z}/n\mathbb{Z}$ under addition mod $n$ where $\varphi$ denotes the Euler totient function.
 \end{enumerate}
 \item Let $R$ be a relation on $\mathbb{Z}/n\mathbb{Z}$ where $[x]_n R [y]_n$ if and only if there exists an invertible $[u]_n$ (under multiplication mod $n$) such that $[x]_n\cdot[u]_n = [y]_n$ where $\cdot$ is the usual multiplication mod $n$.
 \begin{enumerate}
@@ -57,6 +67,34 @@ Verify that $\mathbb{Z}/n\mathbb{Z}$ forms a group under addition mod $n$.
     \item Hence show that distinct equivalence classes of $R$ are precisely the set of generators for distinct subgroups of $\mathbb{Z}/n\mathbb{Z}$
     \item Using this, prove that $n=\sum_{d:d\mid n}\varphi(d)$.
 \end{enumerate}
-\item Let $G$ be a finite abelian group in which the number of solutions in $G$ of the equation $x^n = e$ is at most $n$ for every positive integer $n$. For every $d \in \mathbb{N}$, define a set $A_d = \set{x\in G: x^d = e, \# x = d}$. Prove that $G$ is cyclic. (Hint: Use a counting argument involving the result from 6d and show that $A_n \neq \varnothing$ for all $n\in \mathbb{N}$).
+\item Let $G$ be a finite abelian group in which the number of solutions in $G$ of the equation $x^n = e$ is at most $n$ for every positive integer $n$. For every $d \in \mathbb{N}$, define a set $A_d = \set{x\in G: x^d = e, \# x = d}$. Prove that $G$ is cyclic. (Hint: Use a counting argument involving the result from 6d and show that $A_n \neq \varnothing$ for all $n\in \mathbb{N}$, so $A_{\#G}\neq \varnothing$ and thus we have an element of order $\#G$).
+\item Let $P$ be a maximal subgroup in a finite group $G$ (so a subgroup that is only contained by $G$) such that its order is $p^k$ where $p$ is prime, so $P$ is called a Sylow $p-$subgroup. Sylow's theorems state that \begin{itemize}
+    \item For every $p \mid \# G$, there exists a Sylow $p-$subgroup of order $p^k$ (Corollary: For every $p^r \mid \#G$, there exists a group of order $p^r$)
+    \item If $P_1,P_2$ are Sylow $p-$subgroups, there exists $g$ such that $P_1 = gP_2g^{-1}$
+    \item Let $n_p$ be the number of distinct Sylow $p-$subgroups. Then, $n_p$ divides the index of the Sylow $p-$subgroups, $n_p \equiv 1 \mod p$, and $n_p=[G:N_G(P)]$ where $P$ is any Sylow $p$-subgroup, $N_G(P) = \set{g\in G: gPg^{-1}=P}$
+    \item If $H$ is a group of order $p^r$ where $r \leq k$ then $H$ is contained in a Sylow $p-$subgroup.
+\end{itemize}
+\begin{enumerate}
+    \item Show that $N_G(P)$ is a subgroup of $G$
+    \item We say $H$ is normal in $G$, denoted $H \trianglelefteq G$, if for all $g \in G$, $gHg^{-1} = H$
+    \item Show that if $P$ is a unique Sylow $p-$subgroup of $G$, then $P \trianglelefteq G$.
+    \item Show that $N_G(N_G(P)) = N_G(P)$
+    \item Let $K \trianglelefteq G$. Show that if $P$ is a Sylow $p-$subgroup such that $P \trianglelefteq K$, then $P \trianglelefteq G$.
+    \item A group $G$ is called simple if $\set{e},G$ are the only normal subgroups of $G$. Show that if $\#G = 8896$ then $G$ is not simple.
+    \item Show that if $\# G = 56$ then $G$ is not simple.
+    \item Let $p,q$ be primes with $p<q$. Show that if $\# G = pq$ then $G$ is not simple.
+    \item Let $p,q$ be primes and assume $p \nmid q-1$, $p<q$. Show that if $\#G = pq$, then $G$ is cyclic.
+    \item Let $p,q$ be primes and assume $p \mid q-1$, $p<q$. Show that if $\#G = pq$, then $G$ has a unique non-abelian group of order $pq$. 
+\end{enumerate}
+\item We say $G = G_1 \trianglerighteq G_2 \trianglerighteq \ldots \trianglerighteq G_{r+1} = \set{1}$ if at every stage, $G_{i+1}$ is maximal in $G_i$. Using normal groups $K \trianglelefteq G$, we can form quotient groups $G/K$ where its order is $[G:K]$ and its elements are cosets of $K$ with multiplication being defined as $g_1K * g_2 K = (g_1\cdot g_2) K$ where $\cdot$ is the multiplication in $G$. \begin{enumerate}
+    \item Show that if $G$ is abelian, $G$ is finite if and only if it has a composition series.
+    \item Show that if $G$ is a finite cyclic group, $G$ has a composition series $G = G_1 \trianglerighteq G_2 \trianglerighteq \ldots \trianglerighteq G_{r+1} = \set{1}$ where $\#G_i/\#G_{i+1}$ is prime.
+    \item Show that if $n=n_1,n_2,\ldots,n_{r+1}=1$ is a sequence of integers such that $n_{i}/n_{i+1}$ is prime, then $G$ has a composition series $G = G_1 \trianglerighteq G_2 \trianglerighteq \ldots \trianglerighteq G_{r+1} = \set{1}$.
+\end{enumerate}
+\item We say $G$ is supersolvable if $G$ has a composition series  $G = G_1 \trianglerighteq G_2 \trianglerighteq \ldots \trianglerighteq G_{r+1} = \set{1}$ where at every stage, the quotient group $G_i/G_{i+1}$ is cyclic and $G_i \trianglelefteq G$. \begin{enumerate}
+    \item Show that every group of square free order is supersolvable.
+    \item Show that every group with cyclic Sylow $p-$subgroups is supersolvable.
+    \item Show that if $G$ is finite and supersolvable then every maximal subgroup has a prime index.
+\end{enumerate} 
 \end{enumerate}
 \end{document}
