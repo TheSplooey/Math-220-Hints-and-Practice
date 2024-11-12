@@ -1,0 +1,37 @@
+\documentclass[letterpaper,12pt]{article}
+\newcommand{\myname}{Hints}
+\newcommand{\mynumber}{Hints} 
+\newcommand{\hw}{8} 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+
+\usepackage[paper=letterpaper,left=25mm,right=25mm,top=3cm,bottom=25mm]{geometry}
+
+
+\usepackage{fancyhdr} %% for details on how this work, search-engine ``fancyhdr documentation''
+\pagestyle{fancy}
+
+\lhead{Mathematics 220} % course name as top-left
+\chead{Homework \hw} % homework number in top-centre
+\rhead{ \myname \\ \mynumber }
+
+\lfoot{\myname} % name on bottom-left
+\cfoot{Page \thepage} % page in middle
+\rfoot{\mynumber} % student number on bottom-right
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+%% We also redfine the negation symbol:
+\renewcommand{\neg}{\sim}
+\newtheorem{lemma}{Lemma}[section]
+\begin{document}
+
+\subsection*{Hints to homework 8:}
+\begin{enumerate}
+\item[4.] See the image attached in the folder.
+\item[5.] Be very careful that the relation is defined on $\mathcal{P}(E)$. 
+\item[6.] Be careful, by $[u]_n$ "has a multiplicative inverse" it means that there exists $[v]_n$ such that $[u]_n\cdot [v]_n = [1]_n$ with multiplication being defined based on the usual modular arithmetic. It is interesting, but not helpful, to note that in this problem, you are partitioning $\mathbb{Z}/n\mathbb{Z}$ based on generators for distinct subgroups of $\mathbb{Z}/n\mathbb{Z}$ under addition where generators lie in the same equivalence class if they generate the same subgroup.
+\end{enumerate}
+A lot of this is just definition checking. You may find it useful to split some of the questions into cases.
+\end{document}
