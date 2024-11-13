@@ -1,2 +1,2 @@
-It started off as an extension of a HW problem based on some observations I noticed, and it somehow just all turned into group theory. Probably skip Q9-Q11, IDK why I put those questions there. Q8 can be quite challenging.
-Q5a, Q5b, and Q6 all build up to Q7, which is the question based on the HW problem.
+It started off as an extension of a HW problem based on some observations I noticed, and it somehow just all turned into group theory. Probably skip Q9-Q11, IDK why I put those questions there, I don't even know if all of them can be solved using strictly concepts that are introduced in this practice package, you might need to invoke group actions and some group theory lemmata or theorems. Q8 can be quite challenging.
+Q5a, Q5b, and Q6 all build up to Q7, which is the question based on the HW problem. 
